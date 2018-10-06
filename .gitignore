@@ -1,0 +1,14 @@
+_trial_temp/
+*.pyc
+*.qmlc
+*.sqlite
+*.cpp
+*.o
+script/css*
+script/template*
+build-latestgreatest-*
+bower_components
+node_modules
+.project
+.pydevproject
+qt/build-*
