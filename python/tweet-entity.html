@@ -1,0 +1,131 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="tweet-entity">
+   <template>
+    <style include="shared-styles iron-flex iron-flex-alignment">
+	:host {}
+	.avatar {
+		@apply(--layout-self-end);
+		max-width: 96px;
+		max-height: 96px;
+		padding: 8px 4px 2px 4px;
+		border-radius: 4px;
+	}
+	.fig {
+		@apply(--layout-horizontal);
+		@apply(--layout-around-justified);
+	}	
+	.follows::before {
+		content: "follows ";
+		font-size: 66%
+	}
+	.mutual::before {
+		content: "followed by ";
+		font-size: 66%
+	}
+	.tweet-name {
+		margin-top: 2px
+	}			
+	</style>
+	<div class="layout horizontal">
+	   <div class="layout flex vertical">
+	      <div class="layout horizontal center-justified">
+	         <div class="tweet-name">[[ name(source) ]]</div>
+	      </div>
+	      <div class="layout flex" id="entity">
+	      </div>
+	      <div class="layout horizontal around-justified">
+	         <div class="follows">
+	            [[ follows(entity) ]]
+	         </div>
+	         <div class="mutual">
+	            [[ mutual(entity) ]]
+	         </div>
+	      </div>
+	   </div>
+	   <div class="b">
+	      <img class="avatar" src="[[ large_avi(source) ]]"/>
+	      <div class="fig">
+	         <div>[[ entity.count_avi ]]</div>
+	         <div>[[ entity.count_bg ]]</div>
+	      </div>
+	   </div>
+	</div>		
+   </template>
+   <script>
+	class TweetEntity extends Polymer.Element {
+	    static get is() {
+	        return 'tweet-entity';
+	    }
+	    static get properties() {
+	        return {
+	        	source: Object,
+	        	entity: Object,
+	        	league: Object,	        	
+	        	operator: Object,
+	        	wrapper: Object
+	        }
+	    }
+	    name(t) {
+	    	if ( Array.isArray(t) ) {
+	    		console.log('multi-name', typeof t)
+	    		return t.length == 1? this.name(t[0]) : this.name(t[0]) + ' +' + (t.length -1) 
+	    	} else if (t.name) {
+	    		if ( t.name.includes(',') ) {
+	    			return t.name.split(',').reverse().map((n) => { return n.trim() }).join(' ')
+	    		} else {
+	    			return t.name	
+	    		}	    		
+	    	} else if (t.profile.split(':')[0] == 'team') {
+	    		return t.profile.split(':')[1];
+	    	} else {
+	    		return this.operator.name		
+	    	}	    	
+	    }
+	    follows(e) {
+	    	try {
+	    		return e[this.league.league + '_follows'].length 
+	    	} catch (err) {
+	    		return 0
+	    	}
+	    }
+	    mutual(e) {
+	    	try {
+	    		return e[this.league.league + '_mutual'].length
+	    	} catch (err) {
+	    		return 0
+	    	}	    		
+	    }
+	    large_avi(l) {
+	    	return 'http://' + l.site + '/tw/' + (l.twitter_id || l._twitter_id)  + '/avatar_large.png'
+	    }
+	    entityType(s) {
+	    	if ( s.startsWith('http://') ) {
+	    		return 'player';
+	    	} else if ( s.startsWith('team:') ) {
+	    		return 'team';
+	    	} else if ( s.startsWith('league:') ) {
+	    		return 'league';
+	    	}
+	    }
+		ready() {
+			super.ready();
+			let entity_type = [this.source.site.split('.')[0], this.entityType(this.source.profile)].join('-');			
+			let entity_source = ['site', entity_type].join('/');
+   			Polymer.importHref(        		
+      	 		this.resolveUrl( entity_source + '.html'), 
+            		() => { 
+            			console.log('success:', entity_type);
+            			let entity_element = document.createElement(entity_type);
+            			this.shadowRoot.querySelector('#entity').appendChild(entity_element)
+            		},
+            		() => { console.log('error:', entity_source) },
+             		true			
+             	);
+	    }
+	}
+	customElements.define(TweetEntity.is, TweetEntity);      
+   </script>
+</dom-module>

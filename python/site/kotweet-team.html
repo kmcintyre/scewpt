@@ -1,0 +1,26 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="kotweet-team">
+   <template>
+    <style include="shared-styles iron-flex iron-flex-alignment">
+	:host {
+	}
+    </style>  
+    Kotweet team
+   </template>
+   <script>
+	class KotweetTeam extends Polymer.Element {	
+	    static get is() {
+	        return 'kotweet-team';
+	    }
+	    ready() {
+	    	super.ready()
+	    }
+	}
+	customElements.define(KotweetTeam.is, KotweetTeam);      
+   </script>
+</dom-module>

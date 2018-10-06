@@ -1,0 +1,26 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="ridertweet-team">
+   <template>
+    <style include="shared-styles iron-flex iron-flex-alignment">
+	:host {
+	}
+    </style>  
+    Ridertweet team
+   </template>
+   <script>
+	class RidertweetTeam extends Polymer.Element {	
+	    static get is() {
+	        return 'ridertweet-team';
+	    }
+	    ready() {
+	    	super.ready()
+	    }
+	}
+	customElements.define(RidertweetTeam.is, RidertweetTeam);      
+   </script>
+</dom-module>

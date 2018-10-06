@@ -1,0 +1,26 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="ridertweet-player">
+   <template>
+    <style include="shared-styles iron-flex iron-flex-alignment">
+	:host {
+	}
+    </style>  
+    Ridertweet player
+   </template>
+   <script>
+	class RidertweetPlayer extends Polymer.Element {	
+	    static get is() {
+	        return 'ridertweet-player';
+	    }
+	    ready() {
+	    	super.ready()
+	    }
+	}
+	customElements.define(RidertweetPlayer.is, RidertweetPlayer);      
+   </script>
+</dom-module>

@@ -1,0 +1,26 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="junkeet-league">
+   <template>
+    <style include="shared-styles iron-flex iron-flex-alignment">
+	:host {
+	}
+    </style>  
+    Junkeet league
+   </template>
+   <script>
+	class JunkeetLeague extends Polymer.Element {	
+	    static get is() {
+	        return 'junkeet-league';
+	    }
+	    ready() {
+	    	super.ready()
+	    }
+	}
+	customElements.define(JunkeetLeague.is, JunkeetLeague);      
+   </script>
+</dom-module>

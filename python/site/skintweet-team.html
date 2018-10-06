@@ -1,0 +1,26 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="skintweet-team">
+   <template>
+    <style include="shared-styles iron-flex iron-flex-alignment">
+	:host {
+	}
+    </style>  
+    Skintweet team
+   </template>
+   <script>
+	class SkintweetTeam extends Polymer.Element {	
+	    static get is() {
+	        return 'skintweet-team';
+	    }
+	    ready() {
+	    	super.ready()
+	    }
+	}
+	customElements.define(SkintweetTeam.is, SkintweetTeam);      
+   </script>
+</dom-module>

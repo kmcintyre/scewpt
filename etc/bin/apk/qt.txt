@@ -1,0 +1,1567 @@
+10:49:51: Running steps for project latestgreatest...
+10:49:51: Configuration unchanged, skipping qmake step.
+10:49:51: Starting: "/usr/bin/make" 
+make: Nothing to be done for 'first'.
+10:49:51: The process "/usr/bin/make" exited normally.
+10:49:51: Removing directory /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build/assets
+10:49:51: Removing directory /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build/libs
+10:49:51: Starting: "/usr/bin/make" INSTALL_ROOT=/home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build install
+/home/ubuntu/Qt5.9.0/5.9/android_armv7/bin/qmake -install qinstall program liblatestgreatest.so /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build/libs/armeabi-v7a/liblatestgreatest.so
+10:49:51: The process "/usr/bin/make" exited normally.
+10:49:51: Starting: "/home/ubuntu/Qt5.9.0/5.9/android_armv7/bin/androiddeployqt" --input 
+	/home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-liblatestgreatest.so-deployment-settings.json 
+	--output /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build 
+	--deployment bundled 
+	--android-platform android-25 
+	--jdk /usr/lib/jvm/java-8-openjdk-amd64 --gradle
+Generating Android Package
+  Input file: /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-liblatestgreatest.so-deployment-settings.json
+  Output directory: /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build/
+  Application binary: /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/liblatestgreatest.so
+  Android build platform: android-25
+  Install to device: No
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Controls.Universal.impl
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Controls.impl
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Controls.Material.impl
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Extras.Private.CppUtils
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Extras.Private.CppUtils
+The JavaCompile.setDependencyCacheDir() method has been deprecated and is scheduled to be removed in Gradle 4.0.
+The TaskInputs.source(Object) method has been deprecated and is scheduled to be removed in Gradle 4.0. Please use TaskInputs.file(Object).skipWhenEmpty() instead.
+:preBuild UP-TO-DATE
+:preDebugBuild UP-TO-DATE
+:checkDebugManifest
+:prepareDebugDependencies
+:compileDebugAidl UP-TO-DATE
+:compileDebugRenderscript UP-TO-DATE
+:generateDebugBuildConfig UP-TO-DATE
+:generateDebugResValues UP-TO-DATE
+:generateDebugResources UP-TO-DATE
+:mergeDebugResources UP-TO-DATE
+:processDebugManifest UP-TO-DATE
+:processDebugResources UP-TO-DATE
+:generateDebugSources UP-TO-DATE
+:incrementalDebugJavaCompilationSafeguard UP-TO-DATE
+:compileDebugJavaWithJavac UP-TO-DATE
+:compileDebugNdk NO-SOURCE
+:compileDebugSources UP-TO-DATE
+:mergeDebugShaders UP-TO-DATE
+:compileDebugShaders UP-TO-DATE
+:generateDebugAssets UP-TO-DATE
+:mergeDebugAssets UP-TO-DATE
+:transformClassesWithDexForDebug UP-TO-DATE
+:mergeDebugJniLibFolders UP-TO-DATE
+:transformNative_libsWithMergeJniLibsForDebug UP-TO-DATE
+:processDebugJavaRes NO-SOURCE
+:transformResourcesWithMergeJavaResForDebug UP-TO-DATE
+:validateSigningDebug
+:packageDebug UP-TO-DATE
+:assembleDebug UP-TO-DATE
+
+BUILD SUCCESSFUL
+
+Total time: 8.093 secs
+Android package built successfully in 9.425 ms.
+  -- File: /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build//build/outputs/apk/android-build-debug.apk
+10:50:00: The process "/home/ubuntu/Qt5.9.0/5.9/android_armv7/bin/androiddeployqt" exited normally.
+10:50:00: Starting: "/home/ubuntu/Qt5.9.0/5.9/android_armv7/bin/androiddeployqt" --verbose --output /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build --no-build --input /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-liblatestgreatest.so-deployment-settings.json --deployment bundled --gradle --reinstall --device 944d91a6
+Generating Android Package
+  Input file: /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-liblatestgreatest.so-deployment-settings.json
+  Output directory: /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build/
+  Application binary: /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/liblatestgreatest.so
+  Android build platform: android-25
+  Install to device: 944d91a6
+Detecting dependencies of application.
+Reading dependencies from /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/liblatestgreatest.so
+      lib/libQt5Quick.so
+      lib/libQt5Svg.so
+      lib/libQt5Widgets.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Quick.so
+      lib/libQt5Qml.so
+      lib/libQt5Gui.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Core.so
+Appending dependency: lib/libQt5Core.so
+Reading Android dependencies for Qt5Core
+Appending dependency: lib/libQt5Network.so
+Reading Android dependencies for Qt5Network
+Appending dependency from xml: plugins/bearer/libqandroidbearer.so
+Appending dependency: lib/libQt5Qml.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Gui.so
+      lib/libQt5Core.so
+Appending dependency: lib/libQt5Gui.so
+Reading Android dependencies for Qt5Qml
+Appending dependency from xml: plugins/qmltooling/libqmldbg_debugger.so
+Appending dependency from xml: plugins/qmltooling/libqmldbg_inspector.so
+Appending dependency from xml: plugins/qmltooling/libqmldbg_local.so
+Appending dependency from xml: plugins/qmltooling/libqmldbg_messages.so
+Appending dependency from xml: plugins/qmltooling/libqmldbg_native.so
+Appending dependency from xml: plugins/qmltooling/libqmldbg_nativedebugger.so
+Appending dependency from xml: plugins/qmltooling/libqmldbg_profiler.so
+Appending dependency from xml: plugins/qmltooling/libqmldbg_quickprofiler.so
+Appending dependency from xml: plugins/qmltooling/libqmldbg_server.so
+Appending dependency from xml: plugins/qmltooling/libqmldbg_tcp.so
+Reading Android dependencies for Qt5Gui
+Appending dependency from xml: plugins/platforms/android/libqtforandroid.so
+Appending dependency from xml: plugins/iconengines/libqsvgicon.so
+Appending dependency from xml: plugins/imageformats/libqgif.so
+Appending dependency from xml: plugins/imageformats/libqicns.so
+Appending dependency from xml: plugins/imageformats/libqico.so
+Appending dependency from xml: plugins/imageformats/libqjpeg.so
+Appending dependency from xml: plugins/imageformats/libqsvg.so
+Appending dependency from xml: plugins/imageformats/libqtga.so
+Appending dependency from xml: plugins/imageformats/libqtiff.so
+Appending dependency from xml: plugins/imageformats/libqwbmp.so
+Appending dependency from xml: plugins/imageformats/libqwebp.so
+Appending dependency: lib/libQt5Quick.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Svg.so
+      lib/libQt5Widgets.so
+      lib/libQt5Gui.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Widgets.so
+      lib/libQt5Gui.so
+      lib/libQt5Core.so
+Appending dependency: lib/libQt5Widgets.so
+Reading Android dependencies for Qt5Widgets
+Appending dependency: lib/libQt5Svg.so
+Reading Android dependencies for Qt5Quick
+Appending dependency from xml: lib/libQt5QuickParticles.so
+No android dependencies for Qt5Svg
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/plugins/platforms/android/libqtforandroid.so
+      lib/libQt5Gui.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/plugins/bearer/libqandroidbearer.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/plugins/platforms/android/libqtforandroid.so
+      lib/libQt5Gui.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5QuickParticles.so
+      lib/libQt5Quick.so
+      lib/libQt5Qml.so
+      lib/libQt5Gui.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Scanning for QML imports.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2/libqtquick2plugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2/libqtquick2plugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Qml.so
+      lib/libQt5Gui.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/AbstractButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ApplicationWindow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/BusyIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Button.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/CheckBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/CheckDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/CheckIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ComboBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Container.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Control.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/DelayButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/BusyIndicatorSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/ButtonSection.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/ButtonSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/CheckBoxSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/CheckDelegateSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/ComboBoxSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/ControlSection.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/ControlSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/DialSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/FrameSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/GroupBoxSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/busyindicator-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/busyindicator-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/busyindicator-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/busyindicator-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/button-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/button-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/button-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/button-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/checkbox-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/checkbox-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/checkbox-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/checkbox-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/combobox-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/combobox-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/combobox-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/combobox-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/dial-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/dial-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/dial-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/dial-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/frame-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/frame-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/frame-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/frame-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/groupbox-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/groupbox-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/groupbox-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/groupbox-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/itemdelegate-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/itemdelegate-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/itemdelegate-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/itemdelegate-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/label-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/label-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/label-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/label-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/page-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/page-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/page-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/page-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/pageindicator-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/pageindicator-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/pageindicator-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/pageindicator-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/pane-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/pane-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/pane-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/pane-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/placeholder-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/placeholder-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/placeholder-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/placeholder-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/progressbar-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/progressbar-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/progressbar-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/progressbar-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/radiobutton-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/radiobutton-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/radiobutton-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/radiobutton-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/rangeslider-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/rangeslider-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/rangeslider-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/rangeslider-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/roundbutton-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/roundbutton-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/roundbutton-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/roundbutton-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/scrollview-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/scrollview-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/slider-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/slider-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/slider-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/slider-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/spinbox-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/spinbox-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/spinbox-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/spinbox-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/stackview-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/stackview-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/swipeview-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/swipeview-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/switch-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/switch-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/switch-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/switch-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/textarea-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/textarea-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/textarea-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/textarea-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/textfield-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/textfield-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/textfield-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/textfield-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolbar-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolbar-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolbar-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolbar-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolbutton-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolbutton-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolbutton-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolbutton-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolseparator-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolseparator-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolseparator-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/toolseparator-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/tumbler-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/tumbler-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/tumbler-icon16@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/images/tumbler-icon@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/ItemDelegateSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/LabelSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/PaddingSection.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/PageIndicatorSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/PaneSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/ProgressBarSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/qtquickcontrols2.metainfo
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/RadioButtonSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/RadioDelegateSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/SliderSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/SpinBoxSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/SwipeDelegateSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/SwitchSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/TextAreaSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/TextFieldSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/ToolBarSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/ToolButtonSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/designer/TumblerSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Dial.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Dialog.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/DialogButtonBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Drawer.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Frame.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/GroupBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ItemDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Label.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/libqtquickcontrols2plugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/libqtquickcontrols2plugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+      lib/libQt5QuickTemplates2.so
+      lib/libQt5QuickControls2.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5QuickTemplates2.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Appending dependency: lib/libQt5QuickTemplates2.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5QuickControls2.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+      lib/libQt5QuickTemplates2.so
+Appending dependency: lib/libQt5QuickControls2.so
+No android dependencies for Qt5QuickTemplates2
+No android dependencies for Qt5QuickControls2
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Menu.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/MenuItem.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/MenuSeparator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Page.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/PageIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Pane.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Popup.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ProgressBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/RadioButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/RadioDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/RadioIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/RangeSlider.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/RoundButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ScrollBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ScrollIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ScrollView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Slider.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/SpinBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/StackView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/SwipeDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/SwipeView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Switch.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/SwitchDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/SwitchIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/TabBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/TabButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/TextArea.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/TextField.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ToolBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ToolButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ToolSeparator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/ToolTip.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Tumbler.qml
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Layouts' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Layouts/libqquicklayoutsplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Layouts/libqquicklayoutsplugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Qml.so
+      lib/libQt5Gui.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Layouts/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Layouts/qmldir
+  -- Adding '/home/ubuntu/scewpt/qml/maybe/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/maybe/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Templates.2' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Templates.2/libqtquicktemplates2plugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Templates.2/libqtquicktemplates2plugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+      lib/libQt5QuickTemplates2.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Templates.2/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Templates.2/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Window.2' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Window.2/libwindowplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Window.2/libwindowplugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Qml.so
+      lib/libQt5Gui.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Window.2/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Window.2/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/CircularGauge.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/CircularGauge.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/DelayButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/DelayButton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/CircularGaugeSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/CircularGaugeSpecifics.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/DelayButtonSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/DelayButtonSpecifics.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/DialSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/DialSpecifics.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/GaugeSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/GaugeSpecifics.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/circulargauge-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/circulargauge-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/delaybutton-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/delaybutton-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/dial-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/dial-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/gauge-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/gauge-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/picture-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/picture-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/piemenu-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/piemenu-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/statusindicator-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/statusindicator-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/togglebutton-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/togglebutton-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/tumbler-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/images/tumbler-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/PictureSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/PictureSpecifics.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/PieMenuSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/PieMenuSpecifics.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/qtquickextras.metainfo
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/StatusIndicatorSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/StatusIndicatorSpecifics.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/ToggleButtonSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/designer/ToggleButtonSpecifics.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Dial.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Dial.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Gauge.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Gauge.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/libqtquickextrasplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/libqtquickextrasplugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/PieMenu.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/PieMenu.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/StatusIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/StatusIndicator.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/ToggleButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/ToggleButton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Tumbler.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Tumbler.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/TumblerColumn.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/TumblerColumn.qmlc
+  -- Adding '/home/ubuntu/scewpt/qml/statusbar/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Blend.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Blend.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/BrightnessContrast.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/BrightnessContrast.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Colorize.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Colorize.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/ColorOverlay.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/ColorOverlay.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/ConicalGradient.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/ConicalGradient.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Desaturate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Desaturate.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/DirectionalBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/DirectionalBlur.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Displace.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Displace.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/DropShadow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/DropShadow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/FastBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/FastBlur.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/GammaAdjust.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/GammaAdjust.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/GaussianBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/GaussianBlur.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Glow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/Glow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/HueSaturation.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/HueSaturation.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/InnerShadow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/InnerShadow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/LevelAdjust.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/LevelAdjust.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/libqtgraphicaleffectsplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/libqtgraphicaleffectsplugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/LinearGradient.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/LinearGradient.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/MaskedBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/MaskedBlur.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/OpacityMask.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/OpacityMask.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/RadialBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/RadialBlur.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/RadialGradient.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/RadialGradient.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/RectangularGlow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/RectangularGlow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/RecursiveBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/RecursiveBlur.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/ThresholdMask.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/ThresholdMask.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/ZoomBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/ZoomBlur.qmlc
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/DropShadowBase.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/DropShadowBase.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/FastGlow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/FastGlow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/FastInnerShadow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/FastInnerShadow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/FastMaskedBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/FastMaskedBlur.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/GaussianDirectionalBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/GaussianDirectionalBlur.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/GaussianGlow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/GaussianGlow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/GaussianInnerShadow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/GaussianInnerShadow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/GaussianMaskedBlur.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/GaussianMaskedBlur.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/libqtgraphicaleffectsprivate.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/libqtgraphicaleffectsprivate.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private/qmldir
+  -- Adding '/home/ubuntu/scewpt/qml/statusbar/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Layouts' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2' as QML dependency
+  -- Adding '/home/ubuntu/scewpt/qml/tweets/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/tweets/script/site.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/tweets/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/ChartViewSpecifics.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/AreaSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/BarSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/BoxPlotSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/HorizontalBarSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/HorizontalPercentBarSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/HorizontalStackedBarSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/LineSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/PercentBarSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/PieSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/PolarAreaSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/PolarLineSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/PolarScatterSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/PolarSplineSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/ScatterSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/SplineSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/default/StackedBarSeries.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/areaseries-chart-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/areaseries-chart-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/areaseries-polar-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/areaseries-polar-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/barseries-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/barseries-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/boxplotseries-chart-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/boxplotseries-chart-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/horizontalbarseries-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/horizontalbarseries-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/horizontalpercentbarseries-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/horizontalpercentbarseries-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/horizontalstackedbarseries-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/horizontalstackedbarseries-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/lineseries-chart-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/lineseries-chart-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/lineseries-polar-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/lineseries-polar-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/percentbarseries-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/percentbarseries-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/pieseries-chart-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/pieseries-chart-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/scatterseries-chart-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/scatterseries-chart-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/scatterseries-polar-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/scatterseries-polar-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/splineseries-chart-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/splineseries-chart-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/splineseries-polar-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/splineseries-polar-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/stackedbarseries-icon.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/images/stackedbarseries-icon16.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/designer/qtcharts.metainfo
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/libqtchartsqml2.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/libqtchartsqml2.so
+      lib/libQt5Charts.so
+      lib/libQt5Quick.so
+      lib/libQt5Widgets.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Charts.so
+      lib/libQt5Widgets.so
+      lib/libQt5Gui.so
+      lib/libQt5Core.so
+Appending dependency: lib/libQt5Charts.so
+No android dependencies for Qt5Charts
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtCharts/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ApplicationWindow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ApplicationWindow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/BusyIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/BusyIndicator.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Button.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Button.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Calendar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Calendar.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/CheckBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/CheckBox.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ComboBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ComboBox.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/GroupBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/GroupBox.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Label.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Label.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/libqtquickcontrolsplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/libqtquickcontrolsplugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Menu.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Menu.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/MenuBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/MenuBar.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ProgressBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ProgressBar.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/RadioButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/RadioButton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ScrollView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ScrollView.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Slider.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Slider.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/SpinBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/SpinBox.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/SplitView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/SplitView.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/StackView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/StackView.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/StackViewDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/StackViewDelegate.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/StackViewTransition.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/StackViewTransition.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/StatusBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/StatusBar.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/AnimationDrawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/ClipDrawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/ColorDrawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/Drawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/DrawableLoader.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/GradientDrawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/ImageDrawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/LayerDrawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/NinePatchDrawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/RotateDrawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/drawables/StateDrawable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ApplicationWindowStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ApplicationWindowStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/BasicTableViewStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/BasicTableViewStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/BusyIndicatorStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/BusyIndicatorStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ButtonStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ButtonStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CalendarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CalendarStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CheckBoxStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CheckBoxStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CircularButtonStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CircularButtonStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CircularGaugeStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CircularGaugeStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CircularTickmarkLabelStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CircularTickmarkLabelStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ComboBoxStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ComboBoxStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CommonStyleHelper.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/CommonStyleHelper.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/DelayButtonStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/DelayButtonStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/DialStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/DialStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/FocusFrameStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/FocusFrameStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/GaugeStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/GaugeStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/GroupBoxStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/GroupBoxStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/HandleStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/HandleStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/HandleStyleHelper.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/HandleStyleHelper.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/arrow-down.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/arrow-down@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/arrow-left.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/arrow-left@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/arrow-right.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/arrow-right@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/arrow-up.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/arrow-up@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/button.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/button_down.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/check.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/check@2x.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/editbox.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/focusframe.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/groupbox.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/header.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/knob.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/leftanglearrow.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/needle.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/progress-indeterminate.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/rightanglearrow.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/scrollbar-handle-horizontal.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/scrollbar-handle-transient.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/scrollbar-handle-vertical.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/slider-groove.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/slider-handle.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/spinner_large.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/spinner_medium.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/spinner_small.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/tab.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/images/tab_selected.png
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/MenuBarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/MenuBarStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/MenuStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/MenuStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/PieMenuStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/PieMenuStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ProgressBarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ProgressBarStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/RadioButtonStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/RadioButtonStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ScrollViewStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ScrollViewStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/SliderStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/SliderStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/SpinBoxStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/SpinBoxStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/StatusBarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/StatusBarStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/StatusIndicatorStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/StatusIndicatorStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/SwitchStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/SwitchStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TableViewStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TableViewStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TabViewStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TabViewStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TextAreaStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TextAreaStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TextFieldStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TextFieldStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ToggleButtonStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ToggleButtonStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ToolBarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ToolBarStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ToolButtonStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/ToolButtonStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TreeViewStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TreeViewStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TumblerStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Base/TumblerStyle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Switch.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Switch.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Tab.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Tab.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TableView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TableView.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TableViewColumn.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TableViewColumn.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TabView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TabView.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TextArea.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TextArea.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TextField.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TextField.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ToolBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ToolBar.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ToolButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/ToolButton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TreeView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/TreeView.qmlc
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Layouts' as QML dependency
+  -- Adding '/home/ubuntu/scewpt/qml/db.qml/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/gridview_leagues.qml/site.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/gridview_leagues.qml/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/gridview_leagues.qml/request.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/gridview_leagues.qml/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/LocalStorage' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/LocalStorage/libqmllocalstorageplugin.so
+      lib/libQt5Qml.so
+      lib/libQt5Sql.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Sql.so
+      lib/libQt5Core.so
+Appending dependency: lib/libQt5Sql.so
+Reading Android dependencies for Qt5Sql
+Appending dependency from xml: plugins/sqldrivers/libqsqlite.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/LocalStorage/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/LocalStorage/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/Qt/labs/settings' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/Qt/labs/settings/libqmlsettingsplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/Qt/labs/settings/libqmlsettingsplugin.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/Qt/labs/settings/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/Qt/labs/settings/qmldir
+  -- Adding '/home/ubuntu/scewpt/qml/index.qml/script/site.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/index.qml/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/index.qml/script/request.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/index.qml/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/index.qml/toolbar' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/index.qml/statusbar' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2' as QML dependency
+  -- Adding '/home/ubuntu/scewpt/qml/info.qml/info' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/info.qml/tweets' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/maybe.qml/maybe' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Layouts' as QML dependency
+  -- Adding '/home/ubuntu/scewpt/qml/sites.qml/script/site.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/sites.qml/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/sites.qml/script/request.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/sites.qml/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtWebSockets' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtWebSockets/libdeclarative_qmlwebsockets.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtWebSockets/libdeclarative_qmlwebsockets.so
+      lib/libQt5WebSockets.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5WebSockets.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Appending dependency: lib/libQt5WebSockets.so
+No android dependencies for Qt5WebSockets
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtWebSockets/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtWebSockets/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/XmlListModel' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/XmlListModel/libqmlxmllistmodelplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/XmlListModel/libqmlxmllistmodelplugin.so
+      lib/libQt5Qml.so
+      lib/libQt5XmlPatterns.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5XmlPatterns.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Appending dependency: lib/libQt5XmlPatterns.so
+No android dependencies for Qt5XmlPatterns
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/XmlListModel/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/XmlListModel/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQml/Models.2' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQml/Models.2/libmodelsplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQml/Models.2/libmodelsplugin.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQml/Models.2/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQml/Models.2/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtMultimedia' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtMultimedia/libdeclarative_multimedia.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtMultimedia/libdeclarative_multimedia.so
+      lib/libQt5MultimediaQuick_p.so
+      lib/libQt5Multimedia.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5MultimediaQuick_p.so
+      lib/libQt5Multimedia.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/lib/libQt5Multimedia.so
+      lib/libQt5Network.so
+      lib/libQt5Gui.so
+      lib/libQt5Core.so
+Appending dependency: lib/libQt5Multimedia.so
+Reading Android dependencies for Qt5Multimedia
+Appending dependency from xml: lib/libQt5MultimediaQuick_p.so
+Appending dependency from xml: plugins/mediaservice/libqtmedia_android.so
+Appending dependency from xml: plugins/audio/libqtaudio_opensles.so
+Appending dependency from xml: plugins/video/videonode/libqtsgvideonode_android.so
+Appending dependency from xml: plugins/playlistformats/libqtmultimedia_m3u.so
+Appending dependency: lib/libQt5MultimediaQuick_p.so
+No android dependencies for Qt5MultimediaQuick_p
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtMultimedia/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtMultimedia/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtMultimedia/Video.qml
+  -- Adding '/home/ubuntu/scewpt/qml/stream.qml/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2' as QML dependency
+  -- Adding '/home/ubuntu/scewpt/qml/tweets.qml/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/tweets.qml/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/tweets.qml/tweets' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/WebSocketSite.qml/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/WebSocketSite.qml/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/WebSocketSite.qml/script/site.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/toolbar/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/toolbar/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/toolbar/script/site.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/info/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/info/script/site.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/info/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/site/script/site.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/site/script/database.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/scewpt/qml/site/script/tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding 'request.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding 'tweet.js' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ApplicationWindow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/BusyIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Button.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/CheckBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/CheckDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/CheckIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ComboBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/DelayButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Dial.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Dialog.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/DialogButtonBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Drawer.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Frame.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/GroupBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ItemDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Label.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/libqtquickcontrols2universalstyleplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/libqtquickcontrols2universalstyleplugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+      lib/libQt5QuickTemplates2.so
+      lib/libQt5QuickControls2.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Menu.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/MenuItem.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/MenuSeparator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Page.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/PageIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Pane.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Popup.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ProgressBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/RadioButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/RadioDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/RadioIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/RangeSlider.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/RoundButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ScrollBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ScrollIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Slider.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/SpinBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/StackView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/SwipeDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Switch.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/SwitchDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/SwitchIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/TabBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/TabButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/TextArea.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/TextField.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ToolBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ToolButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ToolSeparator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/ToolTip.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Universal/Tumbler.qml
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ApplicationWindow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/BoxShadow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/BusyIndicator.qml
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Controls.Universal.impl
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Controls.impl
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Button.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/CheckBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/CheckDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/CheckIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ComboBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/CursorDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/DelayButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Dial.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Dialog.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/DialogButtonBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Drawer.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ElevationEffect.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Frame.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/GroupBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ItemDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Label.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+      lib/libQt5QuickTemplates2.so
+      lib/libQt5QuickControls2.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Menu.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/MenuItem.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/MenuSeparator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Page.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/PageIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Pane.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Popup.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ProgressBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/RadioButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/RadioDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/RadioIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/RangeSlider.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/RectangularGlow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/RoundButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ScrollBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ScrollIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Slider.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/SliderHandle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/SpinBox.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/StackView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/SwipeDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/SwipeView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Switch.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/SwitchDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/SwitchIndicator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/TabBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/TabButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/TextArea.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/TextField.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ToolBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ToolButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ToolSeparator.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/ToolTip.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls.2/Material/Tumbler.qml
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/AbstractCheckable.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/AbstractCheckable.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/BasicButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/BasicButton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/BasicTableView.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/BasicTableView.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/CalendarHeaderModel.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/CalendarHeaderModel.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/CalendarUtils.js
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/CalendarUtils.jsc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ColumnMenuContent.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ColumnMenuContent.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ContentItem.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ContentItem.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/Control.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/Control.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/EditMenu.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/EditMenu.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/EditMenu_base.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/EditMenu_base.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/FastGlow.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/FastGlow.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/FocusFrame.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/FocusFrame.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/HoverButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/HoverButton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/MenuContentItem.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/MenuContentItem.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/MenuContentScroller.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/MenuContentScroller.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/MenuItemSubControls.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/MenuItemSubControls.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ModalPopupBehavior.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ModalPopupBehavior.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ScrollBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ScrollBar.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ScrollViewHelper.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ScrollViewHelper.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/SourceProxy.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/SourceProxy.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/StackView.js
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/StackView.jsc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/StackViewSlideDelegate.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/StackViewSlideDelegate.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/style.js
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/style.jsc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/Style.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/Style.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/SystemPaletteSingleton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/SystemPaletteSingleton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TabBar.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TabBar.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TableViewItemDelegateLoader.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TableViewItemDelegateLoader.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TableViewSelection.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TableViewSelection.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TextHandle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TextHandle.qmlc
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Controls.Material.impl
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Extras.Private.CppUtils
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TextInputWithHandles.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TextInputWithHandles.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TextSingleton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TextSingleton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ToolMenuButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/ToolMenuButton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TreeViewItemDelegateLoader.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Private/TreeViewItemDelegateLoader.qmlc
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/CircularButton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/CircularButton.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/CircularButtonStyleHelper.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/CircularButtonStyleHelper.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/CircularTickmarkLabel.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/CircularTickmarkLabel.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/Handle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/Handle.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/PieMenuIcon.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/PieMenuIcon.qmlc
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/TextSingleton.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private/TextSingleton.qmlc
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Extras/Private' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick.2' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQml' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQml/plugins.qmltypes
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQml/qmldir
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android' as QML dependency
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/AndroidStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ApplicationWindowStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/BusyIndicatorStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ButtonStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/CalendarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/CheckBoxStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ComboBoxStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/CursorHandleStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/FocusFrameStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/GroupBoxStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/LabelStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/libqtquickcontrolsandroidstyleplugin.so
+Reading dependencies from /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/libqtquickcontrolsandroidstyleplugin.so
+      lib/libQt5Quick.so
+      lib/libQt5Gui.so
+      lib/libQt5Qml.so
+      lib/libQt5Network.so
+      lib/libQt5Core.so
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/MenuBarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/MenuStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ProgressBarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/qmldir
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/RadioButtonStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ScrollViewStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/SliderStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/SpinBoxStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/StatusBarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/SwitchStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/TableViewStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/TabViewStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/TextAreaStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/TextFieldStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ToolBarStyle.qml
+    -- Appending dependency found by qmlimportscanner: /home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ToolButtonStyle.qml
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ApplicationWindowStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/BusyIndicatorStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ButtonStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/CalendarStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/CheckBoxStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ComboBoxStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/CursorHandleStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/GroupBoxStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ProgressBarStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/RadioButtonStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ScrollViewStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/SliderStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/SpinBoxStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/SwitchStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/TableViewStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/TabViewStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/TextAreaStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/TextFieldStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ToolBarStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+Warning: QML import could not be resolved in any of the import paths: QtQuick.Extras.Private.CppUtils
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Controls/Styles/Android/ToolButtonStyle.qml/drawables' as QML dependency
+    -- Skipping because file does not exist.
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQuick/Window.2' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtQml/Models.2' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtGraphicalEffects/private' as QML dependency
+  -- Adding '/home/ubuntu/Qt5.9.0/5.9/android_armv7/qml/QtMultimedia' as QML dependency
+Copying GNU STL library
+  -- Skipping file /home/ubuntu/android-ndk-r14b/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_shared.so. Same or newer file already in place.
+Copying 849 dependencies from Qt into package.
+Installing Android package to device.
+Running command "/home/ubuntu/Android/Sdk/platform-tools/adb -s 944d91a6  install -r /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build//build/outputs/apk/android-build-debug.apk"
+[  0%] /data/local/tmp/android-build-debug.apk
+[  0%] /data/local/tmp/android-build-debug.apk
+[  1%] /data/local/tmp/android-build-debug.apk
+[  1%] /data/local/tmp/android-build-debug.apk
+[  2%] /data/local/tmp/android-build-debug.apk
+[  2%] /data/local/tmp/android-build-debug.apk
+[  2%] /data/local/tmp/android-build-debug.apk
+[  3%] /data/local/tmp/android-build-debug.apk
+[  3%] /data/local/tmp/android-build-debug.apk
+[  4%] /data/local/tmp/android-build-debug.apk
+[  4%] /data/local/tmp/android-build-debug.apk
+[  5%] /data/local/tmp/android-build-debug.apk
+[  5%] /data/local/tmp/android-build-debug.apk
+[  5%] /data/local/tmp/android-build-debug.apk
+[  6%] /data/local/tmp/android-build-debug.apk
+[  6%] /data/local/tmp/android-build-debug.apk
+[  7%] /data/local/tmp/android-build-debug.apk
+[  7%] /data/local/tmp/android-build-debug.apk
+[  7%] /data/local/tmp/android-build-debug.apk
+[  8%] /data/local/tmp/android-build-debug.apk
+[  8%] /data/local/tmp/android-build-debug.apk
+[  9%] /data/local/tmp/android-build-debug.apk
+[  9%] /data/local/tmp/android-build-debug.apk
+[ 10%] /data/local/tmp/android-build-debug.apk
+[ 10%] /data/local/tmp/android-build-debug.apk
+[ 10%] /data/local/tmp/android-build-debug.apk
+[ 11%] /data/local/tmp/android-build-debug.apk
+[ 11%] /data/local/tmp/android-build-debug.apk
+[ 12%] /data/local/tmp/android-build-debug.apk
+[ 12%] /data/local/tmp/android-build-debug.apk
+[ 13%] /data/local/tmp/android-build-debug.apk
+[ 13%] /data/local/tmp/android-build-debug.apk
+[ 13%] /data/local/tmp/android-build-debug.apk
+[ 14%] /data/local/tmp/android-build-debug.apk
+[ 14%] /data/local/tmp/android-build-debug.apk
+[ 15%] /data/local/tmp/android-build-debug.apk
+[ 15%] /data/local/tmp/android-build-debug.apk
+[ 15%] /data/local/tmp/android-build-debug.apk
+[ 16%] /data/local/tmp/android-build-debug.apk
+[ 16%] /data/local/tmp/android-build-debug.apk
+[ 17%] /data/local/tmp/android-build-debug.apk
+[ 17%] /data/local/tmp/android-build-debug.apk
+[ 18%] /data/local/tmp/android-build-debug.apk
+[ 18%] /data/local/tmp/android-build-debug.apk
+[ 18%] /data/local/tmp/android-build-debug.apk
+[ 19%] /data/local/tmp/android-build-debug.apk
+[ 19%] /data/local/tmp/android-build-debug.apk
+[ 20%] /data/local/tmp/android-build-debug.apk
+[ 20%] /data/local/tmp/android-build-debug.apk
+[ 21%] /data/local/tmp/android-build-debug.apk
+[ 21%] /data/local/tmp/android-build-debug.apk
+[ 21%] /data/local/tmp/android-build-debug.apk
+[ 22%] /data/local/tmp/android-build-debug.apk
+[ 22%] /data/local/tmp/android-build-debug.apk
+[ 23%] /data/local/tmp/android-build-debug.apk
+[ 23%] /data/local/tmp/android-build-debug.apk
+[ 23%] /data/local/tmp/android-build-debug.apk
+[ 24%] /data/local/tmp/android-build-debug.apk
+[ 24%] /data/local/tmp/android-build-debug.apk
+[ 25%] /data/local/tmp/android-build-debug.apk
+[ 25%] /data/local/tmp/android-build-debug.apk
+[ 26%] /data/local/tmp/android-build-debug.apk
+[ 26%] /data/local/tmp/android-build-debug.apk
+[ 26%] /data/local/tmp/android-build-debug.apk
+[ 27%] /data/local/tmp/android-build-debug.apk
+[ 27%] /data/local/tmp/android-build-debug.apk
+[ 28%] /data/local/tmp/android-build-debug.apk
+[ 28%] /data/local/tmp/android-build-debug.apk
+[ 29%] /data/local/tmp/android-build-debug.apk
+[ 29%] /data/local/tmp/android-build-debug.apk
+[ 29%] /data/local/tmp/android-build-debug.apk
+[ 30%] /data/local/tmp/android-build-debug.apk
+[ 30%] /data/local/tmp/android-build-debug.apk
+[ 31%] /data/local/tmp/android-build-debug.apk
+[ 31%] /data/local/tmp/android-build-debug.apk
+[ 31%] /data/local/tmp/android-build-debug.apk
+[ 32%] /data/local/tmp/android-build-debug.apk
+[ 32%] /data/local/tmp/android-build-debug.apk
+[ 33%] /data/local/tmp/android-build-debug.apk
+[ 33%] /data/local/tmp/android-build-debug.apk
+[ 34%] /data/local/tmp/android-build-debug.apk
+[ 34%] /data/local/tmp/android-build-debug.apk
+[ 34%] /data/local/tmp/android-build-debug.apk
+[ 35%] /data/local/tmp/android-build-debug.apk
+[ 35%] /data/local/tmp/android-build-debug.apk
+[ 36%] /data/local/tmp/android-build-debug.apk
+[ 36%] /data/local/tmp/android-build-debug.apk
+[ 37%] /data/local/tmp/android-build-debug.apk
+[ 37%] /data/local/tmp/android-build-debug.apk
+[ 37%] /data/local/tmp/android-build-debug.apk
+[ 38%] /data/local/tmp/android-build-debug.apk
+[ 38%] /data/local/tmp/android-build-debug.apk
+[ 39%] /data/local/tmp/android-build-debug.apk
+[ 39%] /data/local/tmp/android-build-debug.apk
+[ 39%] /data/local/tmp/android-build-debug.apk
+[ 40%] /data/local/tmp/android-build-debug.apk
+[ 40%] /data/local/tmp/android-build-debug.apk
+[ 41%] /data/local/tmp/android-build-debug.apk
+[ 41%] /data/local/tmp/android-build-debug.apk
+[ 42%] /data/local/tmp/android-build-debug.apk
+[ 42%] /data/local/tmp/android-build-debug.apk
+[ 42%] /data/local/tmp/android-build-debug.apk
+[ 43%] /data/local/tmp/android-build-debug.apk
+[ 43%] /data/local/tmp/android-build-debug.apk
+[ 44%] /data/local/tmp/android-build-debug.apk
+[ 44%] /data/local/tmp/android-build-debug.apk
+[ 45%] /data/local/tmp/android-build-debug.apk
+[ 45%] /data/local/tmp/android-build-debug.apk
+[ 45%] /data/local/tmp/android-build-debug.apk
+[ 46%] /data/local/tmp/android-build-debug.apk
+[ 46%] /data/local/tmp/android-build-debug.apk
+[ 47%] /data/local/tmp/android-build-debug.apk
+[ 47%] /data/local/tmp/android-build-debug.apk
+[ 47%] /data/local/tmp/android-build-debug.apk
+[ 48%] /data/local/tmp/android-build-debug.apk
+[ 48%] /data/local/tmp/android-build-debug.apk
+[ 49%] /data/local/tmp/android-build-debug.apk
+[ 49%] /data/local/tmp/android-build-debug.apk
+[ 50%] /data/local/tmp/android-build-debug.apk
+[ 50%] /data/local/tmp/android-build-debug.apk
+[ 50%] /data/local/tmp/android-build-debug.apk
+[ 51%] /data/local/tmp/android-build-debug.apk
+[ 51%] /data/local/tmp/android-build-debug.apk
+[ 52%] /data/local/tmp/android-build-debug.apk
+[ 52%] /data/local/tmp/android-build-debug.apk
+[ 53%] /data/local/tmp/android-build-debug.apk
+[ 53%] /data/local/tmp/android-build-debug.apk
+[ 53%] /data/local/tmp/android-build-debug.apk
+[ 54%] /data/local/tmp/android-build-debug.apk
+[ 54%] /data/local/tmp/android-build-debug.apk
+[ 55%] /data/local/tmp/android-build-debug.apk
+[ 55%] /data/local/tmp/android-build-debug.apk
+[ 55%] /data/local/tmp/android-build-debug.apk
+[ 56%] /data/local/tmp/android-build-debug.apk
+[ 56%] /data/local/tmp/android-build-debug.apk
+[ 57%] /data/local/tmp/android-build-debug.apk
+[ 57%] /data/local/tmp/android-build-debug.apk
+[ 58%] /data/local/tmp/android-build-debug.apk
+[ 58%] /data/local/tmp/android-build-debug.apk
+[ 58%] /data/local/tmp/android-build-debug.apk
+[ 59%] /data/local/tmp/android-build-debug.apk
+[ 59%] /data/local/tmp/android-build-debug.apk
+[ 60%] /data/local/tmp/android-build-debug.apk
+[ 60%] /data/local/tmp/android-build-debug.apk
+[ 61%] /data/local/tmp/android-build-debug.apk
+[ 61%] /data/local/tmp/android-build-debug.apk
+[ 61%] /data/local/tmp/android-build-debug.apk
+[ 62%] /data/local/tmp/android-build-debug.apk
+[ 62%] /data/local/tmp/android-build-debug.apk
+[ 63%] /data/local/tmp/android-build-debug.apk
+[ 63%] /data/local/tmp/android-build-debug.apk
+[ 63%] /data/local/tmp/android-build-debug.apk
+[ 64%] /data/local/tmp/android-build-debug.apk
+[ 64%] /data/local/tmp/android-build-debug.apk
+[ 65%] /data/local/tmp/android-build-debug.apk
+[ 65%] /data/local/tmp/android-build-debug.apk
+[ 66%] /data/local/tmp/android-build-debug.apk
+[ 66%] /data/local/tmp/android-build-debug.apk
+[ 66%] /data/local/tmp/android-build-debug.apk
+[ 67%] /data/local/tmp/android-build-debug.apk
+[ 67%] /data/local/tmp/android-build-debug.apk
+[ 68%] /data/local/tmp/android-build-debug.apk
+[ 68%] /data/local/tmp/android-build-debug.apk
+[ 69%] /data/local/tmp/android-build-debug.apk
+[ 69%] /data/local/tmp/android-build-debug.apk
+[ 69%] /data/local/tmp/android-build-debug.apk
+[ 70%] /data/local/tmp/android-build-debug.apk
+[ 70%] /data/local/tmp/android-build-debug.apk
+[ 71%] /data/local/tmp/android-build-debug.apk
+[ 71%] /data/local/tmp/android-build-debug.apk
+[ 71%] /data/local/tmp/android-build-debug.apk
+[ 72%] /data/local/tmp/android-build-debug.apk
+[ 72%] /data/local/tmp/android-build-debug.apk
+[ 73%] /data/local/tmp/android-build-debug.apk
+[ 73%] /data/local/tmp/android-build-debug.apk
+[ 74%] /data/local/tmp/android-build-debug.apk
+[ 74%] /data/local/tmp/android-build-debug.apk
+[ 74%] /data/local/tmp/android-build-debug.apk
+[ 75%] /data/local/tmp/android-build-debug.apk
+[ 75%] /data/local/tmp/android-build-debug.apk
+[ 76%] /data/local/tmp/android-build-debug.apk
+[ 76%] /data/local/tmp/android-build-debug.apk
+[ 77%] /data/local/tmp/android-build-debug.apk
+[ 77%] /data/local/tmp/android-build-debug.apk
+[ 77%] /data/local/tmp/android-build-debug.apk
+[ 78%] /data/local/tmp/android-build-debug.apk
+[ 78%] /data/local/tmp/android-build-debug.apk
+[ 79%] /data/local/tmp/android-build-debug.apk
+[ 79%] /data/local/tmp/android-build-debug.apk
+[ 79%] /data/local/tmp/android-build-debug.apk
+[ 80%] /data/local/tmp/android-build-debug.apk
+[ 80%] /data/local/tmp/android-build-debug.apk
+[ 81%] /data/local/tmp/android-build-debug.apk
+[ 81%] /data/local/tmp/android-build-debug.apk
+[ 82%] /data/local/tmp/android-build-debug.apk
+[ 82%] /data/local/tmp/android-build-debug.apk
+[ 82%] /data/local/tmp/android-build-debug.apk
+[ 83%] /data/local/tmp/android-build-debug.apk
+[ 83%] /data/local/tmp/android-build-debug.apk
+[ 84%] /data/local/tmp/android-build-debug.apk
+[ 84%] /data/local/tmp/android-build-debug.apk
+[ 84%] /data/local/tmp/android-build-debug.apk
+[ 85%] /data/local/tmp/android-build-debug.apk
+[ 85%] /data/local/tmp/android-build-debug.apk
+[ 86%] /data/local/tmp/android-build-debug.apk
+[ 86%] /data/local/tmp/android-build-debug.apk
+[ 87%] /data/local/tmp/android-build-debug.apk
+[ 87%] /data/local/tmp/android-build-debug.apk
+[ 87%] /data/local/tmp/android-build-debug.apk
+[ 88%] /data/local/tmp/android-build-debug.apk
+[ 88%] /data/local/tmp/android-build-debug.apk
+[ 89%] /data/local/tmp/android-build-debug.apk
+[ 89%] /data/local/tmp/android-build-debug.apk
+[ 90%] /data/local/tmp/android-build-debug.apk
+[ 90%] /data/local/tmp/android-build-debug.apk
+[ 90%] /data/local/tmp/android-build-debug.apk
+[ 91%] /data/local/tmp/android-build-debug.apk
+[ 91%] /data/local/tmp/android-build-debug.apk
+[ 92%] /data/local/tmp/android-build-debug.apk
+[ 92%] /data/local/tmp/android-build-debug.apk
+[ 92%] /data/local/tmp/android-build-debug.apk
+[ 93%] /data/local/tmp/android-build-debug.apk
+[ 93%] /data/local/tmp/android-build-debug.apk
+[ 94%] /data/local/tmp/android-build-debug.apk
+[ 94%] /data/local/tmp/android-build-debug.apk
+[ 95%] /data/local/tmp/android-build-debug.apk
+[ 95%] /data/local/tmp/android-build-debug.apk
+[ 95%] /data/local/tmp/android-build-debug.apk
+[ 96%] /data/local/tmp/android-build-debug.apk
+[ 96%] /data/local/tmp/android-build-debug.apk
+[ 97%] /data/local/tmp/android-build-debug.apk
+[ 97%] /data/local/tmp/android-build-debug.apk
+[ 98%] /data/local/tmp/android-build-debug.apk
+[ 98%] /data/local/tmp/android-build-debug.apk
+[ 98%] /data/local/tmp/android-build-debug.apk
+[ 99%] /data/local/tmp/android-build-debug.apk
+[ 99%] /data/local/tmp/android-build-debug.apk
+[100%] /data/local/tmp/android-build-debug.apk
+/home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build//build/outputs/apk/android-build-debug.apk: 1 file pushed. 2.4 MB/s (15575366 bytes in 6.198s)
+	pkg: /data/local/tmp/android-build-debug.apk
+Success
+Android package built successfully in 16.435 ms.
+  -- It can now be run from the selected device/emulator.
+  -- File: /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/android-build//build/outputs/apk/android-build-debug.apk
+10:50:17: The process "/home/ubuntu/Qt5.9.0/5.9/android_armv7/bin/androiddeployqt" exited normally.
+10:50:17: Pulling files necessary for debugging.
+10:50:17: Package deploy: Running command "/home/ubuntu/Android/Sdk/platform-tools/adb -s 944d91a6 pull /system/bin/app_process32 /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/app_process".
+10:50:17: The command "/home/ubuntu/Android/Sdk/platform-tools/adb" terminated with exit code 1.
+10:50:17: Package deploy: Running command "/home/ubuntu/Android/Sdk/platform-tools/adb -s 944d91a6 pull /system/bin/app_process /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/app_process".
+10:50:17: Package deploy: Running command "/home/ubuntu/Android/Sdk/platform-tools/adb -s 944d91a6 pull /system/lib/libc.so /home/ubuntu/scewpt/build-latestgreatest-Android_for_armeabi_v7a_GCC_4_9_Qt_5_9_0_for_Android_armv7-Debug/libc.so".
+10:50:17: Elapsed time: 00:27.

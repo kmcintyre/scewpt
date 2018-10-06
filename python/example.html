@@ -1,0 +1,31 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="my-example2.html">
+
+<dom-module id="my-example">
+	<template>
+		<my-example2 example2='{{ stringify(example) }}'></my-example2>
+	</template>
+   <script>
+	class MyExample extends Polymer.Element {
+	    static get is() {
+	        return 'my-example';
+	    }	    
+	    static get properties() {
+	        return {
+	        	example: {
+	        		type: Object,
+	        		value: { key: 'value' }
+	        	}
+	        }
+	    }
+	    stringify(o) {
+	    	return JSON.stringify(o)
+	    }
+	    ready() {
+	    	super.ready();
+	    }
+	}
+	customElements.define(MyExample.is, MyExample);      
+   </script>	
+</dom-module>

@@ -1,0 +1,26 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="redlinetweets-league">
+   <template>
+    <style include="shared-styles iron-flex iron-flex-alignment">
+	:host {
+	}
+    </style>  
+    Redlinetweets league
+   </template>
+   <script>
+	class RedlinetweetsLeague extends Polymer.Element {	
+	    static get is() {
+	        return 'redlinetweets-league';
+	    }
+	    ready() {
+	    	super.ready()
+	    }
+	}
+	customElements.define(RedlinetweetsLeague.is, RedlinetweetsLeague);      
+   </script>
+</dom-module>
