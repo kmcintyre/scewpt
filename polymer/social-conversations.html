@@ -1,0 +1,16 @@
+<link rel="import" href="/polymer/timeline-mixin.html">
+
+<dom-module id="social-conversations">
+	<script>
+	class SocialConversations extends TimelineMixin {
+	    static get is() {
+	        return 'social-conversations';
+	    }
+	    ready() {
+	        this.set('find', 'conversations');
+	        super.ready()
+	    }
+	}
+	customElements.define(SocialConversations.is, SocialConversations);
+	</script>
+</dom-module>		 

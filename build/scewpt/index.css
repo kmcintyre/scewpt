@@ -1,0 +1,92 @@
+body {
+	font-family: Geneva, Tahoma, Verdana, sans-serif;
+}
+
+#flshform {
+	margin: 1em;
+}
+
+#top {
+	float:left;
+	margin-bottom: 1em;
+	min-height: 50px;
+	line-height: 50px;
+}
+
+#rules {
+	margin: 1em 0 0 -1em;
+    cursor: pointer;
+    float:left;
+}
+
+#frontpage {
+	font-weight: bolder;
+	display:none;
+}
+
+.card {
+	margin: 1em;
+	border-radius: .5em;
+}
+
+.push {
+	margin: 1em 1em 0 1em;
+}
+.card p:first-child {
+	//margin: 1em;
+}
+section {
+	display:none;
+}
+.example {
+	padding: .5em;
+	background-color:black;
+	color:white;
+	border-radius: .5em;
+}
+
+.example a {
+	color:white;	
+}
+
+.explain {
+	font-style: italic;
+	text-align: right;
+	font-size: .85em;		
+}
+
+.table {
+	clear:both;
+	width: 100%;
+	display: table;
+}
+
+.table div.split {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.beta {
+	background-color: lightgreen;
+	border: 2px solid green;
+}
+
+.notready {
+	background-color: lightpink;
+	border: 2px solid red;
+}
+
+.almostready {
+	background-color: lightyellow;
+	border: 2px solid yellow;
+}
+
+.launch {
+	background-color: lightblue;
+	border: 2px solid blue;
+}
+
+.squeeze {
+	float:left;
+}
+

@@ -1,0 +1,56 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="social-entities">
+   <template>
+      <style>
+         :host {         	
+         }   
+         paper-input {
+         	width:400px;         	
+         }
+      </style>
+      <blockquote>
+      	{{entities.length}} entities
+      </blockquote>
+   </template>
+   <script>
+	class SocialEntities extends Polymer.Element {
+	    static get is() {
+	        return 'social-entities';
+	    }
+	    static get properties() {
+	        return {
+	        	entities: {
+	                type: Array,
+	                observer: 'entitiesChanged'
+	            }
+	    	}
+	    }
+	    entitiesChanged(entities) {
+	    	console.log('entities changed:', entities.length)
+	    }
+	    ready() {
+	    	super.ready()
+	    	console.log('social-entities')
+		   	fetch('http://' + JSON.parse(localStorage.getItem('environment')).service + '/entity/twitter').then((resp) => {
+		   		if (!resp.ok) {
+		   	        throw Error(response.statusText);
+		   	    }
+	   	    	return resp.json();		   			 
+	   		}).then((entities_data) => {
+	   			this.set('entities', entities_data)
+	   		}).catch((error) => {
+	   			console.log('match get error: ' + error.message);
+	   			this.set('entities', [])
+	   		})	    	
+	    }
+	}
+	customElements.define(SocialEntities.is, SocialEntities);      
+   </script>
+</dom-module>
+		   		

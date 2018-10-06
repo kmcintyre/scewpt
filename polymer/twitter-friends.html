@@ -1,0 +1,64 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="twitter-friends">
+<template>
+<style include="shared-styles iron-flex iron-flex-alignment">
+	:host {
+	@apply --layout-vertical; 
+	@apply --layout-end;	
+	}
+</style>
+<div>
+	Follows {{ follows.length }}
+</div>
+<div class="flex"></div>   
+<div>
+	Mutual {{ mutual.length }}
+</div>
+</template>
+<script>
+    class TwitterFriends extends Polymer.Element {
+        static get is() {
+            return 'twitter-friends';
+        }
+        static get properties() {
+            return {
+         	 tweet: {
+         		 type: Object
+         	 },
+         	 follows: {
+         		type: Array
+         	 },
+         	 mutual: {
+          		type: Array
+          	 }
+          }
+        }
+        ready() {
+            super.ready();
+             var scout = ''
+             if ( this.tweet.ts_scout ) {
+            	 scout = '/' + this.tweet.ts_scout 
+             }
+			 var league_service = this.tweet.league + '.' + this.tweet.site;
+			 if (JSON.parse(localStorage.getItem('environment')).title == dev.title) {
+				 var league_service = 'dev.' + nativeDomain;
+			 }
+             var friends_url = 'http://' + league_service + '/friends/' + this.tweet.league + '/' + this.tweet.twitter + scout;
+             console.log('friends url:', friends_url)
+             var local = this
+			 fetch(friends_url).then((resp) => resp.json()).catch(function(error) {
+				console.log('There has been a problem with your fetch operation: ' + error.message);
+			 }).then(function(scout_data) {
+				if ( scout_data ) {
+					local.set('follows', scout_data[local.tweet.league + '_follows'])
+             		local.set('mutual', scout_data[local.tweet.league + '_mutual']) 
+				}
+			 })            
+        }
+    }
+    customElements.define(TwitterFriends.is, TwitterFriends);
+</script>
+</dom-module>

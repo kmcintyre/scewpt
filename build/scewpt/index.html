@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+<title>scewpt.com</title>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<meta name="description"
+	content="Scewpt is the personal website of Kevin McIntyre - future home of the Sean Connery whirling dervisher">
+
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="http://yui.yahooapis.com/3.8.0/build/cssreset/cssreset-min.css">
+<link rel="stylesheet" type="text/css"
+	href="http://yui.yahooapis.com/3.8.0/build/cssgrids/grids-min.css">
+
+<style>
+.sites li {
+	display: table-row;
+}
+
+.sites li a, .sites li span {
+	display: table-cell;
+	padding: 5px
+}
+
+body {
+	margin: auto; /* center in viewport */
+	width: 100%;
+	font-size: 1.75em;
+}
+
+//
+div {
+	border-color: red;
+	border-width: 5px;
+	border-style: dashed;
+	padding: 10px
+}
+
+.activePane, .icon, .activeIcon, .tweet_hidden, .github_hidden {
+	display: none;
+}
+
+.pane {
+	display: none;
+}
+
+.tweet_active, .github_active {
+	cursor: pointer;
+	display: block;
+}
+
+.reference {
+	margin: 100px;
+	opacity: 0.33;
+}
+
+.activeLi {
+	padding-left: 20px;
+}
+
+.tweet_date, .github_date {
+	width: 50%;
+	text-align: right;
+	font-size: .75em;
+	color: gray;
+	padding: 10px;
+}
+
+.nwice_button {
+	margin: 5px 0 5px 10px;
+	font-size: 1.25em;
+}
+
+#github_feed {
+	padding: 20px 0;
+}
+
+#nwicecloud, #nwicepane {
+	padding: 20px
+}
+
+#tanks {
+	cursor: pointer;
+	position: absolute;
+	bottom: 50px;
+}
+
+#nwicepane p {
+	padding: 10px 0 10px 0;
+}
+
+#nwicecloud ul {
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<div class="yui3-g">
+		<div class="yui3-u-1-4">
+			<div id="nwicecloud">
+				<ul>
+					<li id="welcome">scewpt.com</li>
+					<li id="resume">resume</li>
+					<li id="contact">contact</li>
+					<li id="github">github</li>
+				</ul>
+
+				<div id="tanks">tanks</div>
+			</div>
+		</div>
+		<div class="yui3-u-3-4">
+
+			<div id="nwicepane">
+
+				<img class="icon" id="welcome_svg" src="svg/welcome.svg"
+					alt="Welcome to Scewpt.com" /><img class="icon" id="resume_svg"
+					src="svg/pdf.svg" alt="" /><img class="icon" id="scripts_svg"
+					src="svg/script.svg" alt="" /><img class="icon" id="cloud_svg" src="svg/cloud.svg"
+					alt="" /><img class="icon" id="card_svg"
+					src="svg/playing_card.svg" alt="" /><img class="icon"
+					id="scewpt_svg" src="svg/bar.svg" alt="" /><img class="icon"
+					id="contact_svg" src="svg/contact.svg" alt="" /><img class="icon"
+					id="twitter_svg" src="svg/bird.svg" alt="" /><img class="icon"
+					id="github_svg" src="svg/source_code.svg" alt="" /><img
+					class="icon" id="tanks_svg" alt="" />
+
+				<div class="pane" id="welcome_info">
+					<p>Hi!</p>
+					<p>Future home of the Sean Connery whirling dervisher.</p>
+					<p>presently working on:</p>
+					<ul class="sites" style="margin-left: -10px">
+						<li><a href="http://athleets.com">athleets.com</a> <span>13K Pro Athletes
+						<li><a href="http://bringwood.com">bringwood.com</a> <span>Hollywood</span>
+						<li><a href="http://d1tweets.com">d1tweets.com</a> <span>Div. 1 Football</span>
+						<li><a href="http://junkeet.com">junkeet.com</a> <span>Elected Officials and Big Money</span>
+						<li><a href="http://ventorta.com">ventorta.com</a> <span>Market, Venture and Start-ups</span>
+						<li><a href="http://redlinetweets.com">redlinetweets.com</a> <span>Motor-Sports</span>
+						<li><a href="http://pokertalon.com">pokertalon.com</a> <span>WSOP Poker</span>
+						<li><a href="http://ridertweet.com">ridertweet.com</a> <span>Boards, Bikes and Squeeze</span>
+						<li><a href="http://e2brute.com">e2brute.com</a> <span>Socially Famous</span>
+						<li><a href="http://skintweet.com">skintweet.com</a> <span>Porn whatnot</span>
+						<li><a href="http://kotweet.com">kotweet.com</a> <span>UFC</span>
+					</ul>
+
+					<p>Using requirejs, jquery, autobahnjs and server side python
+						twisted, xvfb, qtwebkit, dynamo db, cloudfront, ec2, s3</p>
+
+					<p class="reference">Website of Kevin James McIntyre, software
+						developer living in California.</p>
+				</div>
+
+				<div class="pane" id="resume_info">
+					<p>
+						<a href="resume/Resume_of_Kevin_McIntyre.pdf">pdf</a>
+						<del>word</del>
+					</p>
+					<p>Generated with FOP, XML/XSLT, and Maven.</p>
+					<p>I'm currently on the job market.</p>
+					<p class="reference">
+						<a href="https://github.com/kmcintyre/km_resume">Source code</a>
+						at github.
+					</p>
+				</div>
+
+				<div class="pane" id="scripts_info">
+
+					<p>
+						Recently started scripts repo; <br> bash utilities,
+						cheatsheets of common calls, starter blanks
+					</p>
+
+					<p>
+						<a href="scripts/index.html">http://nwice.com/scripts</a>
+					<p>
+				</div>
+
+				<div class="pane" id="contact_info">
+					<p>
+						Email me at <a href="mailto:kevin70@yahoo.com">kevin70@yahoo.com</a>
+						or <a href="mailto:kebin70@gmail.com">kebin70@gmail.com</a>.
+					</p>
+					<p>Cell: 718-249-5058</p>
+					<p>Skype Handle: kebin_70</p>
+					<p>
+						yambaby <a href="https://twitter.com/freelancerstea">Green Tea
+							Fan</a>.
+					</p>
+				</div>
+				<div class="pane" id="github_info">
+					<p>
+						Find professional information and source code to projects I've
+						released at <a href="https://github.com/kmcintyre">github</a>.
+					</p>
+					<div id="github_feed"></div>
+
+				</div>
+				<div class="pane" id="tanks_info">
+					<p>
+						<a href="http://thenounproject.com/noun/take-a-seat/#icon-No6218"
+							target="_blank">Take a Seat</a> designed by <a
+							href="http://thenounproject.com/iconify" target="_blank">Scott
+							Lewis</a> from The Noun Project
+					</p>
+					<p>
+						<a href="http://thenounproject.com/noun/document/#icon-No5870"
+							target="_blank">Document</a> designed by <a
+							href="http://thenounproject.com/jamison" target="_blank">Jamison
+							Wieser</a> from The Noun Project
+					</p>
+
+					<p>
+						<a href="http://thenounproject.com/noun/scroll/#icon-No14610"
+							target="_blank">Scroll</a> designed by <a
+							href="http://thenounproject.com/weashell" target="_blank">Veysel
+							Kara</a> from The Noun Project
+					</p>
+
+					<p>Playing Cards Designed by Andy Santos-Johnson</p>
+					<p>Bar Collaboration by Roger Cook & Don Shanosky</p>
+					<p>
+						<a href="http://thenounproject.com/noun/cloud/#icon-No322"
+							target="_blank">Cloud</a> from The Noun Project
+					</p>
+					<p>
+						<a href="http://thenounproject.com/noun/source-code/#icon-No1171"
+							target="_blank">Source Code</a> from The Noun Project
+					</p>
+					<p>
+						<a href="http://thenounproject.com/noun/contact/#icon-No6380"
+							target="_blank">Contact</a> designed by <a
+							href="http://thenounproject.com/Gatada" target="_blank">Johan
+							H. W. Basberg</a> from The Noun Project
+					</p>
+					<p>
+						<a href="http://thenounproject.com/noun/bird/#icon-No6104"
+							target="_blank">Bird</a> designed by <a
+							href="http://thenounproject.com/tlb" target="_blank">Thomas
+							Le Bas</a> from The Noun Project
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(document)
+    .ready(
+        function() {
+
+            $.ajax({url: "github_rss.xml"}).done(
+                    function(data) {
+                        var $xml = $(data);
+                        $xml
+                            .find("entry")
+                            .each(
+                                function() {
+                                    var $this = $(this);
+                                    item = {
+                                        title: $this
+                                            .find(
+                                                "content")
+                                            .text(),
+                                    }
+                                    $(
+                                            '#github_feed')
+                                        .append(
+                                            "<div class=\"github_hidden\"><div>" +
+                                            item.title +
+                                            "<div class=\"github_date\"><button class=\"nwice_button\">>></button></div></div>");
+                                });
+
+                        $('.github_hidden')
+                            .first()
+                            .attr('class',
+                                "github_active");
+
+                        $('#github_feed')
+                            .find("a")
+                            .each(
+                                function() {
+                                    if (!$(this)
+                                        .attr(
+                                            'href')
+                                        .startsWith(
+                                            "http")) {
+                                        $(this)
+                                            .attr(
+                                                'href',
+                                                "https://github.com" +
+                                                $(
+                                                    this)
+                                                .attr(
+                                                    'href'));
+                                    }
+                                    $(this)
+                                        .click(
+                                            function(
+                                                event) {
+                                                $(
+                                                        location)
+                                                    .attr(
+                                                        'href',
+                                                        $(
+                                                            this)
+                                                        .attr(
+                                                            'href'));
+                                                return false;
+                                            });
+                                });
+
+                        $('#github_feed')
+                            .click(
+                                function() {
+                                    $(
+                                            '#github_feed')
+                                        .find(
+                                            ".github_active")
+                                        .attr(
+                                            'class',
+                                            "github_hidden")
+                                        .next()
+                                        .attr(
+                                            'class',
+                                            "github_active");
+                                });
+
+                    });
+
+            $(window).resize(function() {
+                $("#nwicemain").height($(window).height());
+            });
+
+            $(window).resize();
+
+            var latestclick = null;
+
+            $(window).unload(function() {
+                console.info('unload');
+                if (latestclick != null) {
+                    window.location = '#' + latestclick;
+                }
+            });
+
+            function navclick() {
+
+                $('.activePane').attr('class', 'pane').hide();
+                $('.activeIcon').attr('class', 'icon').hide();
+                $('.activeLi').removeClass('activeLi');
+
+                //window.location = '#' + $(this).attr('id');
+                //lastclick = $(this).attr('id');
+                document.cookie = "lastclick=" +
+                    $(this).attr('id');
+
+                $(this).attr('class', 'activeLi');
+                $('#' + $(this).attr('id') + '_info').attr(
+                    'class', 'activePane');
+
+                angle = Math.random() * 360;
+                $('#' + $(this).attr('id') + '_svg').attr(
+                    'class', 'activeIcon').css({
+                    position: "relative",
+                    top: 75 * Math.cos(angle),
+                    left: 75 * Math.sin(angle)
+                });
+                $('.activeIcon').animate({
+                    top: 0,
+                    left: 0,
+                    opacity: "show"
+                }, 1000, "swing", function() {
+                    $('.activePane').animate({
+                        opacity: "show"
+                    }, 1000)
+                });
+            }
+
+            $("#nwicecloud").find('li').click(navclick);
+            $("#tanks").click(navclick);
+
+            var results = document.cookie
+                .match('(^|;) ?lastclick=([^;]*)(;|$)');
+            if (results != null) {
+                $('#' + unescape(results[2])).click();
+            } else if (window.location.hash) {
+                $(window.location.hash).click();
+            } else {
+                $('#welcome').click();
+            }
+        })
+	</script>
+
+</body>
+</html>

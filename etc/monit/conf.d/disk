@@ -1,0 +1,2 @@
+check filesystem Ubuntu with path /dev/xvda1
+    if space usage > 95% then exec "/home/ubuntu/scewpt/etc/bin/restart.sh >> /home/ubuntu/logs/monit.log"

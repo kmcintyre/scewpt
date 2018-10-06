@@ -1,0 +1,11 @@
+[Unit]
+Description=Self Identify Service
+
+[Service]
+User=ubuntu
+EnvironmentFile=/home/ubuntu/scewpt/etc/python.env
+WorkingDirectory=/home/ubuntu/scewpt/python
+ExecStart=/usr/bin/python /home/ubuntu/scewpt/python/amazon/self_identify.py
+
+[Install]
+WantedBy=multi-user.target

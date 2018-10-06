@@ -1,0 +1,15 @@
+[Unit]
+Description=Alt Stalk Service
+After=multi-user.target
+
+[Service]
+User=ubuntu
+EnvironmentFile=/home/ubuntu/scewpt/etc/python.env
+WorkingDirectory=/home/ubuntu/scewpt/python
+ExecStart=/usr/bin/python /home/ubuntu/scewpt/python/twitter/qt/stalk.py 5
+StandardError=null
+Restart=always
+RestartSec=3600
+
+[Install]
+WantedBy=multi-user.target

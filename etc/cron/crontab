@@ -1,0 +1,63 @@
+PYTHONIOENCODING=utf8
+
+*/5 * * * * /home/ubuntu/scewpt/etc/cron/gstreamer_kill.sh >> /home/ubuntu/logs/cron/gstreamer_kill.log 2>&1
+*/15 * * * * /home/ubuntu/scewpt/etc/cron/tmp_checkup.sh >> /home/ubuntu/logs/cron/clean_tmp.log 2>&1
+0 */2 * * * /home/ubuntu/nwice/scripts/github_atom_to_nwice.sh >> /home/ubuntu/logs/cron/github_tmp.log 2>&1
+
+00 17 * * * /home/ubuntu/morningoogle.com/etc/bin/morningoogle.sh       > /home/ubuntu/logs/mg.log
+
+00 01 * * * /home/ubuntu/scewpt/etc/bin/bible.sh csl                    > /home/ubuntu/logs/csl.log
+
+15 03 * * * /home/ubuntu/scewpt/etc/bin/bible.sh celebrity              > /home/ubuntu/logs/celebrity.log
+45 03 * * * /home/ubuntu/scewpt/etc/bin/bible.sh ufc                    > /home/ubuntu/logs/ufc.log
+
+30 04 * * * /home/ubuntu/scewpt/etc/bin/bible.sh porn                   > /home/ubuntu/logs/porn.log
+
+40 05 * * * /home/ubuntu/scewpt/etc/bin/bible.sh rfpl                   > /home/ubuntu/logs/rfpl.log
+
+15 09 * * * /home/ubuntu/scewpt/etc/bin/bible.sh ipl                    > /home/ubuntu/logs/ipl.log
+45 09 * * * /home/ubuntu/scewpt/etc/bin/bible.sh nascar                > /home/ubuntu/logs/nascar.log
+
+15 10 * * * /home/ubuntu/scewpt/etc/bin/bible.sh gov                    > /home/ubuntu/logs/gov.log
+30 10 * * * /home/ubuntu/scewpt/etc/bin/bible.sh tennis             > /home/ubuntu/logs/tennis.log
+45 10 * * * /home/ubuntu/scewpt/etc/bin/bible.sh golf                   > /home/ubuntu/logs/golf.log
+55 10 * * * /home/ubuntu/scewpt/etc/bin/bible.sh seriea                 > /home/ubuntu/logs/seriea.log
+
+15 11 * * * /home/ubuntu/scewpt/etc/bin/bible.sh laliga                 > /home/ubuntu/logs/laliga.log
+45 11 * * * /home/ubuntu/scewpt/etc/bin/bible.sh ligue1                 > /home/ubuntu/logs/ligue1.log
+
+15 12 * * * /home/ubuntu/scewpt/etc/bin/bible.sh bundesliga             > /home/ubuntu/logs/bundesliga.log
+30 12 * * * /home/ubuntu/scewpt/etc/bin/bible.sh primeira               > /home/ubuntu/logs/primeira.log
+45 12 * * * /home/ubuntu/scewpt/etc/bin/bible.sh bpl                    > /home/ubuntu/logs/bpl.log
+
+00 13 * * * /home/ubuntu/scewpt/etc/bin/bible.sh aac                    > /home/ubuntu/logs/aac.log
+15 13 * * * /home/ubuntu/scewpt/etc/bin/bible.sh acc                    > /home/ubuntu/logs/acc.log
+30 13 * * * /home/ubuntu/scewpt/etc/bin/bible.sh big12                  > /home/ubuntu/logs/big12.log
+45 13 * * * /home/ubuntu/scewpt/etc/bin/bible.sh bigten                 > /home/ubuntu/logs/bigten.log
+
+10 14 * * * /home/ubuntu/scewpt/etc/bin/bible.sh cusa                   > /home/ubuntu/logs/cusa.log
+15 14 * * * /home/ubuntu/scewpt/etc/bin/bible.sh fbsindependent         > /home/ubuntu/logs/fbsindependent.log
+30 14 * * * /home/ubuntu/scewpt/etc/bin/bible.sh mac                    > /home/ubuntu/logs/mac.log
+45 14 * * * /home/ubuntu/scewpt/etc/bin/bible.sh mountainwest           > /home/ubuntu/logs/mountainwest.log
+
+00 15 * * * /home/ubuntu/scewpt/etc/bin/bible.sh pac12                  > /home/ubuntu/logs/pac12.log
+15 15 * * * /home/ubuntu/scewpt/etc/bin/bible.sh sec                    > /home/ubuntu/logs/sec.log
+30 15 * * * /home/ubuntu/scewpt/etc/bin/bible.sh sunbelt                > /home/ubuntu/logs/sunbelt.log
+45 15 * * * /home/ubuntu/scewpt/etc/bin/bible.sh hollywood          > /home/ubuntu/logs/hollywood.log
+
+01 16 * * * /home/ubuntu/scewpt/etc/bin/bible.sh market               > /home/ubuntu/logs/market.log
+
+00 17 * * * /home/ubuntu/scewpt/etc/bin/bible.sh nfl                    > /home/ubuntu/logs/nfl.log
+15 17 * * * /home/ubuntu/scewpt/etc/bin/bible.sh mlb                    > /home/ubuntu/logs/mlb.log
+30 17 * * * /home/ubuntu/scewpt/etc/bin/bible.sh nba                    > /home/ubuntu/logs/nba.log
+45 17 * * * /home/ubuntu/scewpt/etc/bin/bible.sh nhl                    > /home/ubuntu/logs/nhl.log
+
+00 18 * * * /home/ubuntu/scewpt/etc/bin/bible.sh mls                    > /home/ubuntu/logs/mls.log
+
+30 21 * * * /home/ubuntu/scewpt/etc/bin/bible.sh poker                  > /home/ubuntu/logs/poker.log
+
+
+#40 16 * * * /home/ubuntu/scewpt/etc/bin/bible.sh extreme               > /home/ubuntu/logs/extreme.log
+
+#0 00 * * * /home/ubuntu/scewpt/etc/bin/bible.sh venture                > /home/ubuntu/logs/venture.log
+#0 00 * * * /home/ubuntu/scewpt/etc/bin/bible.sh startup                > /home/ubuntu/logs/startup.log

@@ -1,0 +1,3 @@
+check system localhost
+  if swap usage > 66% for 8 cycles then exec "/home/ubuntu/scewpt/etc/bin/restart.sh >> /home/ubuntu/logs/monit.log"
+  if cpu usage (user) > 75% for 4 cycles then exec "/home/ubuntu/scewpt/etc/bin/restart.sh >> /home/ubuntu/logs/monit.log"

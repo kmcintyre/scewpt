@@ -1,0 +1,2 @@
+check system localhost
+  if swap usage > 6% for 2 cycles then exec /sbin/reboot

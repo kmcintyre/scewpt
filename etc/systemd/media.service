@@ -1,0 +1,9 @@
+[Unit]
+Description=Update Media and Symbolic Links
+
+[Service]
+User=ubuntu
+ExecStart=/home/ubuntu/scewpt/etc/bin/media_update.sh
+
+[Install]
+WantedBy=multi-user.target

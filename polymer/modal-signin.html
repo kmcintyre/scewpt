@@ -1,0 +1,81 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/paper-styles/typography.html">
+
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="modal-signin">
+   <template>        
+        <style include="iron-flex iron-flex-alignment">
+            :host {     
+            	padding: 25px                       
+            }
+    		.headline {
+    			@apply --paper-font-headline;    			    			
+    		} 
+    		paper-tab, paper-icon-item, paper-button, dt {
+    			@apply --paper-font-title;
+    			background-color: rgba(255, 255, 255, 0.75);
+    		}
+    		dt {
+    			@apply --layout-horizontal;
+    			@apply --layout-flex;    			
+    		}
+			.button {
+    			background: var(--default-primary-color);
+    			color: white;
+    		}    				
+         </style>   
+     	 	<iron-icon dialog-dismiss icon="cancel" style="float:right"></iron-icon>
+     	 	<div class="headline">Help Curate</div>
+     	 	<dl>
+	  			<dt>Step 1</dt>
+	  			<dd>
+	  				<span hidden$="{{ defined(user.oauth_token) }}">
+	  					<paper-spinner active></paper-spinner>
+	  				</span>
+	  				<a hidden$="[[ !user.oauth_token ]]" href="https://api.twitter.com/oauth/authenticate?oauth_token={{ user.oauth_token }}" target="_blank">
+						<img src="https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png"/>
+					</a>																
+				</dd>
+	  			<dt>Step 2</dt>
+	  			<dd>
+	  				Confirmation
+					<paper-input 
+						id="pin"
+						label="Authorize PIN"
+	   	  				on-change="confirm"					
+					></paper-input>					
+	  			</dd>
+	  			<dt>Step 3</dt>
+	  			<dd class="layout vertical">
+		  			<paper-checkbox id="waiver">
+		  			  Waiver/Pledge
+ 					  <span class="subtitle">
+   						Please try to do no harm.
+ 					  </span>
+ 					  <span class="subtitle">
+   						Achievements tags only.
+ 					  </span>
+		  			</paper-checkbox>		  			
+		  			<paper-button on-tap="complete" raised class="button">
+						Complete 				
+					</paper-button>
+				</dd>
+		 	</dl>		 
+   </template>
+   <script>
+	class ModalSignin extends Polymer.Element {
+	    static get is() {
+	        return 'modal-signin';
+	    }	    
+	    ready() {
+	    	super.ready()
+	    }
+	}
+	customElements.define(ModalSignin.is, ModalSignin);      
+   </script>
+</dom-module>

@@ -1,0 +1,262 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="/bower_components/iron-list/iron-list.html">
+<link rel="import" href="/bower_components/paper-styles/typography.html">
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="social-missing">
+   <template>
+      <style include="shared-styles iron-flex iron-flex-alignment">
+         :host {         	
+         }    
+	     paper-checkbox {
+	     	margin: 5px;
+	     	width: 175px;
+	     }         
+         paper-input {
+         	width: 225px
+         }
+         span.key {
+         	padding: 10px 0px 10px 0px; 
+         }
+         span.key:after {
+         	content: "-" 
+         }
+         span.value {
+         	padding: 10px 10px 10px 0;         
+         }
+	     .matched {
+	     	filter: grayscale(100%);
+	     }
+	     .loading {
+	     	padding-top: 50px;
+	     }	      
+	     .jersey, .position, .team {
+	     	margin: 0 5px 0 5px;
+	     }
+	     .title {
+	     	@apply(--paper-font-display1);
+	     }        
+      </style>
+      <blockquote hidden$="[[!loaded]]">      		
+     		{{ filtered_missing.length }} of {{missing.length}} Matched {{ social_key }}      		
+     		<div class="layout horizontal wrap">
+	      		<template id="checkboxes" is="dom-repeat" items="{{ leagues }}">
+	      			<paper-checkbox id="filter_{{ item.name }}" checked  on-change="toggle_league">{{ item.count }} {{ item.name }}</paper-checkbox>	      			
+	      		</template>
+	      		<paper-button 
+					on-tap="select_leagues"
+					act="all"
+					style="background-color: white"
+					raised
+				>All</paper-button>
+				<paper-button 
+					on-tap="select_leagues"
+					act="none"
+					style="background-color: white"
+					raised
+				>None</paper-button>				
+     		</div>	      	
+      </blockquote>
+      <blockquote hidden$="[[loaded]]" class="layout horizontal center-justified loading">
+      		<div style="padding-right:20px;" class="title">Loading Missing</div><paper-spinner class="large" active></paper-spinner>
+      </blockquote>
+      <iron-list items="[[filtered_missing]]" scroll-target="document">
+      	<template>
+      		<div class="listwrapper">
+	      		<div class="listcontainer">
+	      			<div class="layout horizontal">
+	      				<div class="layout vertical">
+	      					<div class="name">{{item.name}}</div>
+							<template is="dom-if" if="{{item.pic}}">
+								<div class="pic">
+									<img src="{{item.pic}}">
+								</div>
+							</template>	      					
+	      				</div>	      					 
+	      				<div class="layout verical" style="margin:0 10px 0 10px">
+	      					<template is="dom-if" if="{{item.team}}">
+								<div class="team">{{item.team}}</div>
+							</template>
+							<template is="dom-if" if="{{item.position}}">
+								<div class="position">{{item.position}}</div>
+							</template>
+							<template is="dom-if" if="{{item.jersey}}">
+								<div class="jersey">#{{item.jersey}}</div>
+							</template>
+	      				</div>     			
+		      			<div class="layout verical flex">
+			      			<div class="layout horizontal">			      						
+								<div class="layout flex"><a href="{{item.profile}}" target="_blank">{{item.profile}}</a></div>
+								<div>{{item.league}}</div>			
+							</div>
+							<div style="margin-top:10px">
+								<template is="dom-repeat" items="{{ keyvalue(item) }}" as="kv">
+									<span class="key">{{kv.key}}</span><span class="value">{{kv.value}}</span>
+								</template>
+							</div>							
+							<div  class$="{{ action_classes(item.matched) }}">								
+								<paper-input 
+									label$="{{ label(item.matched) }}"
+									profile$="{{item.profile}}"
+				   	  				on-change="perform"		   	  	
+				   	  				disabled$="{{item.matched}}"							
+								></paper-input>
+								<div style="width:20px"></div>						
+								<a class="google search" href="https://www.google.com/search?q={{item.name}}+{{social_key}}" target="_blank">&nbsp;<span style="text-decoration:underline">{{item.name}}+{{social_key}}</span></a>
+		      				</div>	      			
+		      			</div>	      			
+		      		</div>
+	      		</div>
+	      	</div>
+      	</template>
+      </iron-list>
+   </template>
+   <script>
+	class SocialMissing extends Polymer.Element {
+		static get is() {
+			return 'social-missing'
+	    }
+	    static get properties() {
+	        return {
+	        	loaded: {
+	        		value: false
+	        	},
+	        	social_key: {
+	        		value: 'twitter'
+	        	},
+	            filtered_missing: {
+	                type: Array
+	            },
+	            leagues: {	            	
+	            	value: nativeLeagues.map(l => ({name: l, count: 0}))
+	            },	        	
+	        	missing: {
+	                type: Array
+	            }
+	    	}
+	    }
+	    label(matched) {
+	    	if ( matched ) {
+	    		return "Thank You"
+	    	} else {
+	    		return "Suggest " + this.social_key
+	    	}
+	    }
+	    action_classes(matched) {
+	    	if ( matched ) {
+	    		return "layout horizontal end matched"
+	    	} else {
+	    		return "layout horizontal end"
+	    	}
+	    }	    
+	    select_leagues(e) {
+	    	[].forEach.call(this.shadowRoot.querySelectorAll('[id^=filter_]'), function(checkbox) {
+	    		if ( e.target.getAttribute('act') == 'all' ) {
+	    			checkbox.checked = true
+	    		} else {
+	    			checkbox.checked = false
+	    		}    		  	    		  
+	    	});	    	
+	    	this.filter_missing()
+	    }
+	    toggle_league(e) {
+	    	this.filter_missing()
+	    }
+	    filter_missing() {
+	    	var f = this.missing.filter((m) => {
+	    		return this.shadowRoot.querySelector('[id=filter_' + m.league + ']').checked && !m.matched 
+	    	})
+	    	this.set('filtered_missing', f);
+	    }	    
+	    perform(e) {
+	    	for (var x = 0; x < this.missing.length; x++) {
+	    		if ( this.missing[x].profile == e.model.item.profile ) {
+	    			this.set(['missing', x, 'matched'], true);
+	    		}
+	    	}	    	
+	    	var match = {
+	    		profile: e.target.getAttribute('profile')	    		
+	    	}
+	    	match[this.social_key] = e.target.value
+	    	e.target.value = '';
+			var request = new Request('http://' + JSON.parse(localStorage.getItem('environment')).service + '/match/twitter', {
+   	         	method: 'POST', 
+   	         	mode: 'cors',
+   	         	body: JSON.stringify(match)
+   	        });
+   	        fetch(request).then((resp) => {
+   	        	if (!resp.ok) {
+		   	        throw Error(response.statusText);
+		   	    }
+	   	    	return resp.json(); 
+   	        }).then((match_result) => {
+		   		console.log('match result:', match_result)
+		   	}).catch((error) => {
+		   		console.log('match post error: ' + error.message);
+		   	});	    	
+	    }
+	    keyvalue(i) {
+	    	return Object.keys(i).filter((k) => { 
+	    		return ['profile', 'team', 'position', 'league', 'name', 'site', 'match_twitter', 'pic', 'matched'].indexOf(k) == -1 && !k.startsWith('ts_')
+	    	}).map((k) => {
+	    		return { key: k, value: i[k] }
+	    	})
+	    }
+	    load_missing() {
+			fetch('http://' + JSON.parse(localStorage.getItem('environment')).service + '/missing/twitter').then((resp) => {
+		   		if (!resp.ok) {
+		   	        throw Error(response.statusText);
+		   	    }
+	   	    	return resp.json();	
+			}).then((missing_data) => {
+		   		console.log('missing data length:', missing_data.length)
+		   		missing_data.forEach((m) => {
+		   			m.matched = false
+		   		})
+				missing_data.sort((a, b) => {
+					if ( a.league > b.league ) {
+						return 1
+					} else if ( a.league < b.league ) {
+						return -1
+					} else if (a.team && b.team) {
+						if ( a.team > b.team ) {
+							return 1
+						} else if ( a.team < b.team ) {
+							return -1
+						} else if ( a.name > b.name ) {
+							return 1;						
+						} else if ( a.name < b.name ) {
+							return -1;						
+						}
+					} else if ( a.name > b.name ) {
+						return 1;						
+					} else if ( a.name < b.name ) {
+						return -1;						
+					} 
+					return 0;
+				});		   		
+				this.leagues.forEach((l, i) => {
+					this.set(['leagues', i, 'count'], missing_data.filter(m => { return m.league == l.name }).length)
+				})		   		
+		   		this.set('missing', missing_data)
+		   		this.set('loaded', true);
+	   			this.filter_missing()
+		   	}).catch((error) => {
+		   		console.log('There has been a problem with your fetch operation: ' + error.message)
+		   		this.set('missing', [])
+		   	})	    	
+	    }
+	    ready() {
+	    	super.ready()
+	    	this.load_missing()
+	    }
+	}
+	customElements.define(SocialMissing.is, SocialMissing);      
+   </script>
+</dom-module>

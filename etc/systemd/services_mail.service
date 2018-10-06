@@ -1,0 +1,13 @@
+[Unit]
+Description=Scewpt Mail
+
+[Service]
+User=root
+Group=root
+EnvironmentFile=/home/ubuntu/scewpt/etc/python.env
+WorkingDirectory=/home/ubuntu/scewpt/python
+ExecStart=/usr/local/bin/twistd -noy services/mail.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

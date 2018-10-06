@@ -1,0 +1,127 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/typography.html">
+<link rel="import" href="/bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="/polymer/league-tweet.html">
+
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="timeline-mixin">
+   <template>
+      <style include="shared-styles iron-flex iron-flex-alignment">
+         :host {         	
+         	@apply(--layout-vertical);         		
+         }	         
+      </style>   
+      <div id="incoming"></div>
+      <div id="start"></div>
+      <div id="history">
+	      <div id="bottom" class="init">
+	      		<div class="layout horizontal">
+	      			Loading&nbsp;<span class="capitalize">{{ find }}</span>
+	      			<paper-spinner style="padding-left:20px;" class="large" active></paper-spinner>
+	      		</div>	      		
+	      		<div>
+	      			<span class="capitalize">{{ find }}</span> Limit Reached
+	      		</div>
+	      		<div style="padding: 10px 0 20px 0">
+	      			<a class="angelco angleplug" href="https://angel.co/{{ angelco }}" target="_blank"><span>Learn More About This Project</span></a>
+	      		</div>	      			      		      	
+	      </div>
+      </div>                                          
+   </template>
+   <script>
+   class TimelineMixin extends Polymer.Element {
+       static get is() {
+           return 'timeline-mixin';
+       }
+       static get properties() {
+           return {
+               find: {
+                   type: String
+               },
+               results: {
+                   type: Array
+               },
+               display: {
+                   value: 0
+               },
+               intersectionObserver: {
+                   type: Object
+               },
+               angelco: {
+                   value: nativeDomain.replace('.', '-')
+               }
+           }
+       }
+       do_fetch() {
+           let url = 'http://' + JSON.parse(localStorage.getItem('environment')).service + '/site/recent/' + this.find;
+           if (this.display > 0) {
+               url += '?skip=' + this.display
+           }
+           return fetch(url).then((resp) => {
+               if (!resp.ok) {
+                   throw Error(response.statusText);
+               }
+               return resp.json();
+           })
+       }
+       show() {
+           //console.log('show:', this.display)
+           if (this.display < this.results.length) {
+               let next_display = Math.min(this.results.length, this.display + 5);
+               this.results.slice(this.display, next_display).forEach((c) => {
+                   let lt = document.createElement('league-tweet');
+                   lt.setAttribute('tweet', JSON.stringify(c))
+                   this.$.history.insertBefore(lt, this.$.bottom);
+               })
+               this.set('display', next_display)
+           } else {
+               this.do_fetch().then((results_data) => {
+                   if (results_data.length == 0) {
+                       throw Error(this.find + ' response length is 0');
+                   }
+                   this.set('results', this.results.concat(results_data))
+                   this.show();
+               }).catch((error) => {
+                   console.log(this.find, 'get error: ' + error.message);
+                   this.intersectionObserver.unobserve(this.$.bottom)
+                   this.$.bottom.classList.add('finished')
+               })
+           }
+       }
+       ready() {
+           super.ready()
+           window.addEventListener('tweet-' + this.find, (e) => {
+               let ce = document.createElement('league-tweet')
+               ce.setAttribute('tweet', JSON.stringify(e.detail.tweet))
+               this.$.incoming.insertBefore(ce, this.$.incoming.firstChild)
+           }, false);
+           this.set('intersectionObserver', new IntersectionObserver(entries => {
+               //console.log(this.find, 'intersection entries:', entries);
+               if (entries[0].intersectionRatio !== 0) {
+                   this.show();
+               }
+           }, {
+               threshold: 1.0
+           }));
+           console.log('timeline mixin:', this.find)
+           this.do_fetch().then((results_data) => {
+               this.set('results', results_data)
+               setTimeout(() => {
+                   this.intersectionObserver.observe(this.$.bottom);
+                   setTimeout(() => {
+                       this.$.bottom.classList.remove('init')
+                   }, 500)
+               }, 1000)
+           }).catch((error) => {
+               console.log(this.find, 'get error: ' + error.message);
+               this.set('reults', [])
+           })
+       }
+   }
+   customElements.define(TimelineMixin.is, TimelineMixin);      
+   </script>
+</dom-module>	 

@@ -1,0 +1,13 @@
+[Unit]
+Description=Tweet Queue Check Service
+
+[Service]
+User=ubuntu
+EnvironmentFile=/home/ubuntu/scewpt/etc/python.env
+WorkingDirectory=/home/ubuntu/scewpt/python
+ExecStart=/usr/bin/python /home/ubuntu/scewpt/python/twitter/job/tweet_queue_check.py
+Restart=always
+RestartSec=900
+
+[Install]
+WantedBy=multi-user.target

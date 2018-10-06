@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="advanced_checkbox_preference"
+        android:title="Title Advanced Toggle Preference"
+        android:summaryOn="Summary On Advanced Toggle Preference"
+        android:summaryOff="Summary Off Advanced Toggle Preference" />
+
+</PreferenceScreen>

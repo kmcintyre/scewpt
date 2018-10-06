@@ -1,0 +1,28 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="tweet-wrapper">
+<template>
+<style>
+:host {
+	@apply --layout-horizontal; 
+	@apply --layout-end;
+}
+.bump {
+	padding-bottom: 10px
+}
+</style>
+	<div class="bump flex self-stretch"><slot name="friends"></slot></div>
+	<div class="bump"><slot name="tmdb"></slot></div>
+	<div class="bump"><slot name="rank"></slot></div>
+</template>
+    <script>
+        class TweetWrapper extends Polymer.Element {
+            static get is() {
+                return 'tweet-wrapper';
+            }
+        }
+        customElements.define(TweetWrapper.is, TweetWrapper);
+    </script>
+</dom-module>

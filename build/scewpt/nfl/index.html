@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>NFL</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<style>
+#main {
+	border: 2px solid #000000;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+</style>
+</head>
+<body>
+	<div id="main"></div>
+	<script src="/nfl/football.js" type="text/javascript"></script>
+	<script src="/nfl/nfl.js" type="text/javascript"></script>
+	<script src="/nfl/kinetic-v4.7.3.min.js"></script>	
+	<script>
+var stage = new Kinetic.Stage({
+	container: 'main', 
+	width: window.innerWidth, 
+	height: window.innerHeight
+});
+
+var b = new ball();
+b.x = window.innerWidth / 2;
+b.y = window.innerHeight / 2;
+b.radius = window.innerWidth * window.innerHeight / (11 * 11 * 11 * 11);      
+
+var tl = fl = ll = current_formation = null;
+
+function teams_layer(offsetx, offsety) {
+	var layer = new Kinetic.Layer();	
+	for (x = 0; x < nfl.length; x++) {
+		//console.info('team:' + nfl[x].name + 'x,y:' + offsetx + ',' + offsety);
+		
+		var simpleText = new Kinetic.Text({
+        	text: nfl[x].name,
+        	fill: 'black', 
+        	id: x,
+        	fontSize: b.radius / 4
+      	});
+      	
+		var img=new Image();
+		img.crossOrigin="anonymous";
+		img.src = "http://i.nflcdn.com/static/site/5.15/img/logos/svg/teams-matte-mascot/" + nfl[x].name.substring(nfl[x].name.lastIndexOf(" ") + 1).toLowerCase() + ".svg";
+		img.height = simpleText.getHeight();
+		img.width = simpleText.getHeight();
+
+      	if ( offsetx + simpleText.getWidth() + simpleText.getHeight() > stage.getWidth() ) {
+      		console.info('team:' + nfl[x].name + 'x,y:' + offsetx + ',' + offsety);
+			offsetx = 0;
+			offsety += simpleText.getHeight();			
+		} 
+		
+		img.onload = function () {
+			console.info('load image');
+			try {
+    		var image = new Kinetic.Image({
+    			image:img,
+    			x:offsetx,
+    			y:offsety        		
+    		});
+    		console.info('add image');
+    		layer.add(image);
+    		layer.draw();
+    		} catch (err) {
+    			console.info(err);
+    		}	    		
+    	}
+    	offsetx += simpleText.getHeight();
+		simpleText.setPosition(offsetx, offsety);			
+		offsetx += simpleText.getWidth();
+		
+		simpleText.on('click', function(evt) {
+			console.info('team:' + this.attrs.id);
+      	});		
+      	layer.add(simpleText);      		    
+	}
+	return layer;
+}
+
+function formations_layer(offsetx, offsety) {
+	var layer = new Kinetic.Layer();
+	for (var f in formations) {
+		var simpleText = new Kinetic.Text({
+        	x: offsetx,
+        	y: offsety,
+        	text: formations[f].name,
+        	fill: 'black',
+        	fontSize: b.radius / 3,
+        	id: f
+      	  });
+
+		simpleText.on('click', function() {
+			console.info('formation:' + this.attrs.id);
+			ll.remove();
+			ll = lineup_layer(b, formations[this.attrs.id]);
+        	stage.add(ll);
+      	});
+      	  
+    offsetx += simpleText.getWidth() + 25;
+	  if ( offsetx > stage.getWidth() ) {
+		offsetx = 0;
+		offsety += simpleText.getHeight();
+	  }
+      layer.add(simpleText);
+
+	}
+	return layer;
+}
+
+function lineup_layer(ball, formation) {
+	console.info('lineup:' + formation.alignment.length);
+	var layer = new Kinetic.Layer();
+	for ( x = 0; x < formation.alignment.length; x++ ) {
+		p = formation.alignment[x][0];
+		xoffset = formation.alignment[x][1];
+		yoffset = formation.alignment[x][2];
+		
+		x_pos = ball.x + (xoffset * ball.radius);
+		y_pos = ball.y + (yoffset * ball.radius);
+		
+		//console.info('draw x:' + x_pos + 'y:' + y_pos + ' formation type:' + formation.type);
+		
+		if ( formation.type == formation_types.O || formation.type == formation_types.ST) {
+			var circle = new Kinetic.Circle({
+       			x: x_pos,
+       			y: y_pos,
+       			radius: ball.radius,
+       			stroke: 'black',
+       			strokeWidth: b.width
+     			});
+     			layer.add(circle);
+		} else if ( formation.type == formation_types.D ) {
+		
+			var line = new Kinetic.Line({
+  				points: [x_pos - ball.radius / 2, y_pos - ball.radius / 2, x_pos + ball.radius / 2, y_pos + ball.radius / 2],
+  				stroke: 'black',
+        		strokeWidth: ball.width
+			});
+			layer.add(line);
+			line = new Kinetic.Line({
+  				points: [x_pos - ball.radius / 2, y_pos + ball.radius / 2, x_pos + ball.radius / 2, y_pos - ball.radius / 2],
+  				stroke: 'black',
+        		strokeWidth: ball.width
+			});
+			layer.add(line);			
+		} else {
+			alert('no position');
+		}
+	}
+	return layer;
+}
+
+//tl = teams_layer(0, 0);
+//stage.add(tl);
+
+//console.info(tl.getSize());
+
+fl = formations_layer(0, 100);		 
+stage.add(fl);
+
+ll = lineup_layer(b, formations["O"]);
+stage.add(ll);
+</script>
+</body>
+</html>

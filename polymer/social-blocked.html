@@ -1,0 +1,85 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+
+<dom-module id="social-blocked">
+   <template>
+      <style>
+         :host {         	
+         }   
+         .blocked {
+         	display: inline-block;
+         	width: 200px;
+         	height: 200px;
+         	margin: 10px;
+         	background-color:white;
+	     	@apply --shadow-elevation-4dp;         	
+         }
+         paper-input {
+         	width:400px;         	
+         }
+      </style>
+      <blockquote>
+      		<b>{{blocked.length}} Blocked Tweeters</b> - Users  mistaken for context members, such as a famous person with a common name.
+      		<paper-input 
+				label="handle"
+				on-change="addBlock"				
+			>
+			<iron-icon icon="add-box" slot="prefix" style="margin-right:10px"></iron-icon>
+			<div slot="suffix">Block Twitter</div>			
+			</paper-input>					
+      </blockquote>
+      <div style="text-align:center">
+	      <template is="dom-repeat" items="{{blocked}}" as="block">
+	      		<div class="blocked" id="twitter_{{block}}">
+	      			{{block}}
+	      		</div>
+	      </template>
+      </div> 
+   </template>
+   <script>
+	class SocialBlocked extends Polymer.Element {
+	    static get is() {
+	        return 'social-blocked';
+	    }
+	    static get properties() {
+	        return {
+	        	blocked: {
+	                type: Array,
+	                observer: 'blockedChanged'
+	            }
+	    	}
+	    }
+	    addBlock(e) {
+	    	console.log(e.target.value)
+	    }
+	    blockedChanged(blocked) {
+	    	console.log('blocked length:', blocked.length);
+	   		blocked.forEach((b) => {
+	   			var block_div = Polymer.dom(this.root).querySelector('div#twitter_' + b)
+	   			//console.log('block div:', block_div)
+	   		})
+	    }
+	    ready() {
+	    	super.ready()
+	    	console.log('social blocked')
+		   	fetch('http://' + nativeDomain + '/site/twitter_blocked.json').then((resp) => {
+		   		if (!resp.ok) {
+		   	        throw Error(response.statusText);
+		   	    }		   		
+		   		return resp.json()
+		   	}).then((blocked_data) => {
+		   		blocked_data.sort()
+		   		this.set('blocked', blocked_data)
+		   	}).catch((error) => {
+		   		console.log('There has been a problem with your fetch operation: ' + error.message);
+		   	})
+	    }
+	}
+	customElements.define(SocialBlocked.is, SocialBlocked);      
+   </script>
+</dom-module>
+		   		

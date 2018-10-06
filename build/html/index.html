@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ role }}</title>
+        
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+    
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <link rel="icon">
+    
+    <meta name="application-name" content="{{ role }}">
+    {{#site_leagues}}
+    	<meta name="league" content="{{.}}">
+	{{/site_leagues}}
+    <!-- See https://goo.gl/OOhYW5 
+    <meta name="description"
+	content="Exclusive destination for tweets of the stars! ** Unwittingly powered by the stars themselves.">
+	<meta name="keywords" content="Start the rumor, don't follow it ">
+    <link rel="manifest" href="manifest.json">
+    -->
+
+    <!-- See https://goo.gl/qRE0vM -->
+    <meta name="theme-color" content="#3f51b5">
+
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="{{ role }} - {{ description }}">
+
+    <!-- Homescreen icons -->
+    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
+
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <script src="intersection-observer.js"></script>    
+    
+    <script>
+    function native_domain() {
+        if ((document.domain.match(/\./g) || []).length == 2) {
+            return document.domain.substring(document.domain.indexOf('.') + 1)
+        } else {
+            return document.domain
+        }
+    }
+    avatarDomain = 'http://socialcss.com.s3-website-us-east-1.amazonaws.com'
+    nativeDomain = native_domain()
+    nativeLeagues = [];
+    [].forEach.call(document.querySelectorAll('meta[name="league"]'), function(league) {
+        nativeLeagues.push(league.content)
+    });
+
+    // Register the base URL
+    if ('serviceWorker' in navigator && location.protocol == 'https:') {
+        const baseUrl = document.querySelector('base').href;
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register(baseUrl + 'service-worker.js');
+        });
+    }
+
+    function setWidth() {
+    	let w = window.innerWidth;
+    	if ( w > 959 ) {
+    		document.documentElement.style.setProperty('--mWidth', '550px');
+    		let v = Math.min((w - 600)/2, 300);    		
+    		document.documentElement.style.setProperty('--vWidth', '' + v + 'px' );
+    	} else if ( w > 600 ) {
+    		document.documentElement.style.setProperty('--mWidth', '400px');
+    		let v = Math.min((w - 430)/2, 300);
+    		document.documentElement.style.setProperty('--vWidth', '' + v + 'px' );
+    	} else {
+    		document.documentElement.style.setProperty('--mWidth', '' + (w-30) + 'px');
+    	}    	
+    }    
+    window.addEventListener("resize", setWidth);
+    setWidth();
+    
+    window.addEventListener("fullscreenchange", (event) => {
+        console.log('full screen:', event)
+        alert('full screen')
+    });
+    window.addEventListener("message", (message) => {
+        console.log('postMessage:', message)
+    }, false);
+
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+        return t;
+    }(document, "script", "twitter-wjs"));
+    
+    twttr.ready(function(twttr) {
+        console.log('twitter ready')
+        twttr.events.bind('click', (e) => {
+            console.log('twitter click:', e)
+        });
+    });    
+    
+
+    var prod = {
+        on: true,
+        title: 'Production',
+        service: 'service.' + nativeDomain
+    };
+    
+    if (!localStorage.getItem("environment")) {
+        localStorage.setItem('environment', JSON.stringify(prod))
+    }      
+        
+    var dev = {
+        on: false,
+        title: 'Development',
+        service: 'dev.' + nativeDomain
+    };
+
+    function socket_service() {
+        try {
+            var s = JSON.parse(localStorage.getItem('environment')).service
+            if (s) {
+                return s;
+            }
+        } catch (err) {}
+        return prod.service
+    }
+    var service = socket_service();    
+    
+    var web_socket = null;
+    var global_leagues = null;
+
+    function block_leagues(force) {
+    	let blocked_leagues = global_leagues.filter( (l) => { return l.blocked }).map( (l) => { return l.league.league })
+    	if ( blocked_leagues.length > 0 || force ) {
+    		console.log('blocked leagues:', blocked_leagues)
+    		web_socket.send(JSON.stringify({
+    			block: blocked_leagues
+    		}));
+    	}
+    }	    
+    window.addEventListener('update_leagues', function(e) {
+    	global_leagues = e.detail.leagues;
+        if (!web_socket) {	        	
+            web_socket = new WebSocket('ws://' + JSON.parse(localStorage.getItem('environment')).service + ':8080');
+            //web_socket = new WebSocket('ws://dev.athleets.com:8080');
+   	    	web_socket.addEventListener('message', (event) => {
+   	    		if (event.data instanceof Blob) {
+   	    			var lenreader = new window.FileReader();
+   	    			lenreader.readAsText(event.data.slice(0, 5));
+   	    			lenreader.onloadend = function() {
+   	    				var meta_length = parseInt(lenreader.result)
+   	    				console.log('meta length:', meta_length)
+   	    				var jsonreader = new window.FileReader();
+   	    				jsonreader.readAsText(event.data.slice(5, meta_length + 5));
+   	    				jsonreader.onloadend = function() {
+   	    					var raw_tweet = JSON.parse(jsonreader.result)
+   	    					var imgreader = new window.FileReader();
+   	    					imgreader.readAsDataURL(event.data.slice(meta_length + 5));
+   	    					imgreader.onloadend = function() {
+   	    						window.dispatchEvent(new CustomEvent('instagram', { detail: {
+   	    							tweet: raw_tweet,
+   	    							image: imgreader.result
+   	    						}}));                				
+	                 		}
+   	    				}
+   	    			}
+   	    		} else {
+   	    			try {
+   	    				let tweet = JSON.parse(event.data)
+   	    				if ( tweet.league && tweet.twitter && (!tweet.unknown_retweet || tweet.windout) ) {
+   	    					window.dispatchEvent(new CustomEvent('tweet', { detail: {
+								tweet
+	    					}}));   	    					
+   	    					['conversation', 'quote', 'mentions'].forEach((t) => {
+   	    						if ( tweet.hasOwnProperty('known_' + t) ) {
+   	    							let event_name = 'tweet-' + t;
+   	    							if ( !t.endsWith('s') ) {
+   	    								event_name += 's'
+   	    							}   	    							
+   	    							window.dispatchEvent(new CustomEvent(event_name, { detail: {
+   	 									tweet
+   	 	    						}}));	
+   	    						}
+   	    					});
+   	    					new Array().forEach.call(document.querySelectorAll('link[rel="icon"]'), (link) => {
+   	    						link.href = 'http://' + tweet.site + '/tw/' + tweet._twitter_id + '/avatar_small.png';
+   	    						document.title = tweet.name || tweet.profile.split(':')[1];
+   	    					});
+   	    				} else if (tweet.ts_heartbeat) {
+   	    					console.log('heartbeat:', tweet)
+   	    				} else if (tweet.unknown_retweet) {
+   	    					console.log('unknown retweet:', tweet)
+   	    				} else {
+   	    					console.log('unknown:', tweet)
+   	    				}
+   	    			} catch (err) {
+   	    				console.log(err, event.data)
+   	    			}
+   	    		}
+   	    	});	            
+            web_socket.addEventListener('open', function(event) {
+            	block_leagues(false)
+            	window.dispatchEvent(new CustomEvent('open', { detail: {
+            		web_socket
+				}})); 
+            });
+        } else {
+        	block_leagues(true)
+        }
+    });    
+    var atTop = true;
+    </script>
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>    
+	<link rel="import" href="polymer/main-app.html">
+
+    <style>  
+    @import url(https://fonts.googleapis.com/css?family=Permanent+Marker:400,700);
+    @import url(https://fonts.googleapis.com/css?family=Arimo);
+    
+    body {
+        transition: opacity ease-in 0.2s;
+    	transition-property: opacity;
+    	transition-duration: 0.2s;
+    	transition-timing-function: ease-in;
+    	transition-delay: 0s;
+    	background-color: #eee;
+    	position: relative     	
+    }
+	html * {
+		font-family: 'Arimo', sans-serif;			   
+	}    
+    html, body {
+    	height: 100%;
+  		margin: 0;  		
+	}	
+    </style>
+  </head>
+  <body>
+  	<div id="top"></div>	
+    <main-app></main-app>
+    <script>
+    new IntersectionObserver(entries => {
+        console.log('top observer entries:', entries);
+        if (entries[0].intersectionRatio !== 0) {
+            atTop = true;
+        } else {
+        	atTop = false;
+        }
+    }, {
+        threshold: 1.0
+    }).observe(document.getElementById('top'));
+    </script>
+  </body>
+</html>

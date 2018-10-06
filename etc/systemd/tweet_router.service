@@ -1,0 +1,12 @@
+[Unit]
+Description=Tweet Router Service
+
+[Service]
+User=ubuntu
+EnvironmentFile=/home/ubuntu/scewpt/etc/python.env
+WorkingDirectory=/home/ubuntu/scewpt/python
+ExecStart=/usr/bin/python /home/ubuntu/scewpt/python/twitter/qt/tweet_router.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

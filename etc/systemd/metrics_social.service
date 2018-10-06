@@ -1,0 +1,13 @@
+[Unit]
+Description=Metrics Social Service
+
+[Service]
+User=ubuntu
+EnvironmentFile=/home/ubuntu/scewpt/etc/python.env
+WorkingDirectory=/home/ubuntu/scewpt/python
+ExecStart=/usr/bin/python /home/ubuntu/scewpt/python/twitter/job/metrics_social.py
+Restart=always
+RestartSec=600
+
+[Install]
+WantedBy=multi-user.target

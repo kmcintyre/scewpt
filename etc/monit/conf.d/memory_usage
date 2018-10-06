@@ -1,0 +1,2 @@
+check system localhost
+  if memory usage > 80% for 2 cycles then exec "/home/ubuntu/scewpt/etc/bin/restart.sh"

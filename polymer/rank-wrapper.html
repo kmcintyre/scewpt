@@ -1,0 +1,91 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<link rel="import" href="/bower_components/google-chart/google-chart.html">
+
+<script src="/bower_components/date-fns/dist/date_fns.min.js"></script>
+
+<dom-module id="rank-wrapper">
+<template>
+<style>
+	:host { }
+	google-chart {
+	  height: 100px;
+	  width: 300px;
+	}	
+</style>
+<google-chart
+  id='google_chart'
+  type='scatter'
+  options='{{ options() }}'
+  data='{{ rankings() }}'
+>
+</google-chart>
+</template>
+<script>
+	function fmt(d, f) {
+		return dateFns.format(d, f ? f : 'MMM, D YYYY')
+	}
+    function tooltip(r) {
+    	return r.rank + '\r\n' + fmt(new Date(r.ts * 1000))
+    }
+    class RankWrapper extends Polymer.Element {
+        static get is() {
+            return 'rank-wrapper';
+        }
+        static get properties() {
+            return {
+         	 rank: {
+         		 type: Object
+         	 },
+         	 current_rank: {
+        		 type: Number
+        	 }
+          }
+        }
+        rankings() {
+        	if ( this.rank.ranking_list.length == 0 ) {
+        		this.$.google_chart.style.display = 'none';
+        		return;
+        	}
+        	var d = [[{label:'Date', type: 'date'}, {label: 'Rank', type: 'number'}, {label: 'Tooltip', role: 'tooltip'}]]
+        	this.rank.ranking_list.forEach(function (r) {
+        		d.push([new Date(r.ts * 1000), parseInt(r.rank), tooltip(r)])
+        	})
+        	return d
+        }
+        rank_title() {
+        	if ( this.current_rank == 0 ) {
+        		if ( this.rank.ranking_list.length > 0 ) {
+        			var d = new Date( this.rank.ranking_list[0].ts * 1000)
+        			return 'IMDB Unranked as of ' + fmt(d, 'MMM, YYYY')
+        		} else {
+        			return 'IMDB Unranked'
+        		}        		
+        	} else {
+        		return 'IMDB Rank: ' + this.current_rank
+        	} 
+        }
+        options() {
+        	return {
+        		titleTextStyle: {
+        			fontSize: 16,
+        			fontName: 'Roboto Slab',
+        			bold: false
+        		},
+        		title: this.rank_title(), 
+        		legend: 'none', 
+        		colors: ['#55acee'],        		
+        		chartArea: { 
+        			width: '100%', 
+        			height: '80%', 
+        			left: 0, 
+        			bottom: 0}, 
+        		hAxis: { textPosition: 'none' }, 
+        		vAxis: { textPosition: 'none', direction: -1, minValue: 0, maxValue: 2000 },
+        		baselineColor: '#CCCCCC',
+        		backgroundColor: '#eee'
+        	}
+        }
+    }
+    customElements.define(RankWrapper.is, RankWrapper);
+</script>
+</dom-module>

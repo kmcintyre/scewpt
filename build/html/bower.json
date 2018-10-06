@@ -1,0 +1,26 @@
+{
+  "name": "application",
+  "dependencies": {
+    "polymer": "^2.2.0",
+    "app-layout": "latest",
+    "date-fns": "latest",
+    "iron-icons": "latest",
+    "iron-list": "latest",
+    "iron-pages": "latest",
+    "iron-selector": "latest",
+    "google-chart": "latest",
+    "paper-button": "latest",
+    "paper-card": "git://github.com/PolymerElements/paper-card.git#master",
+    "paper-checkbox": "latest",    
+    "paper-dialog": "latest",
+    "paper-dialog-scrollable": "latest",
+    "paper-icon-button": "latest",
+    "paper-input": "latest",
+    "paper-item": "latest",
+    "paper-spinner": "latest",
+    "paper-styles": "latest",
+    "paper-tabs": "latest",
+    "paper-toggle-button": "latest"
+  },
+  "private": true
+}

@@ -1,0 +1,38 @@
+{
+  "entrypoint": "index.html",
+  "shell": "polymer/main-app.html",
+  "fragments": [
+  	"polymer/social-mentions.html",
+  	"polymer/social-instagrams.html",
+    "polymer/social-conversations.html",
+    "polymer/social-quotes.html",    
+    "polymer/social-instagrams.html", 
+    "polymer/social-stream.html", 
+    "polymer/social-match.html",
+    "polymer/social-missing.html", 
+    "polymer/social-entities.html",
+    "polymer/social-blocked.html",
+    "polymer/shared-styles.html",
+    "polymer/league-tweet.html",
+    "polymer/league-mixin.html",
+    "polymer/tweet-entity.html",
+    "polymer/timeline-mixin.html"
+  ],
+  "sources": [
+    "polymer/**/*",
+    "images/**/*",
+    "bower.json"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "bower_components/webcomponentsjs/*.js.map"
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  },
+  "builds": [{
+  	"preset": "es5-bundled",
+  	"addServiceWorker": false,
+  	"addPushManifest": false
+  }]
+}

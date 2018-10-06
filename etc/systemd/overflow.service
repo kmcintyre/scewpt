@@ -1,0 +1,14 @@
+[Unit]
+Description=Overflow Service
+After=multi-user.target
+
+[Service]
+User=ubuntu
+EnvironmentFile=/home/ubuntu/scewpt/etc/python.env
+WorkingDirectory=/home/ubuntu/scewpt/python
+ExecStart=/usr/bin/python /home/ubuntu/scewpt/python/league/job/overflow.py
+Restart=always
+RestartSec=900
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,192 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/paper-card/paper-card.html">
+<link rel="import" href="/bower_components/paper-toggle-button/paper-toggle-button.html">
+<link rel="import" href="/bower_components/paper-dialog-scrollable/paper-dialog-scrollable.html">
+
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="/bower_components/paper-styles/typography.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="modal-settings">
+<template>
+	<style include="shared-styles iron-flex iron-flex-alignment">
+		:host {
+		}
+        paper-dialog-scrollable {
+        	@apply --layout-flex;
+        	background-color: #eee;		        		
+  		}
+  		.settings {
+  			width: 100%;
+          	height: calc(100% - 112px);
+  			@apply --layout-vertical;
+  		}
+  		paper-card {
+  			border-top-left-radius: 8px;
+  			border-top-right-radius: 8px;
+  			width: calc((100% / 3) - 15px);
+  			margin: 0 6px 12px 6px;
+  			--paper-card-header-color: white;
+  			--paper-card-header-text: {
+  				background-color: rgba(0,0,0,0.6);
+  				margin: 0 0 4px 4px;
+  				border-radius: 8px;
+  			};
+  		}
+  		.header_row {
+  			@apply --layout-horizontal;
+  			border-bottom: 1px solid black;   			
+  		}
+  		.footer_row {
+  			padding-top: 10px;
+  			@apply --layout-horizontal;
+  			@apply --layout-center-justified;
+  			color: white;   			
+  		}  		
+  		.header_row div {
+  			padding: 0 12px 0 12px;
+  		}
+  		iron-icon {
+  			--iron-icon-width: 32px;
+  			--iron-icon-height: 32px; 
+  			cursor: pointer; 			
+  		}
+  		.card-actions {
+  			@apply --layout-horizontal;  			
+  		}  	
+  		.space {
+  			@apply --layout-flex;
+  			@apply --paper-font-title;   
+  		}
+	    .prefix::before {
+  			content: attr(data-prefix) " ";  			
+  		}  		
+  		.explain {
+  			@apply --paper-font-subhead;
+  			margin: 6px 0 6px 0;
+  			text-align: center;
+  		} 
+  		[icon="cancel"] {
+  			margin-right: 4px;
+  		}
+	</style>
+	<div class="header_row">
+		<div class="layout flex explain">
+			<b>Toggle Leagues to disable/enable Tweets Instagrams Conversation Mentions & Quotes</b>
+		</div>
+		<iron-icon dialog-dismiss icon="cancel"></iron-icon>
+	</div>
+	<div class="settings">
+		<paper-dialog-scrollable>
+			<div>&nbsp;</div>						
+			<template is="dom-repeat" items="{{leagues}}" as="entity">
+				<paper-card heading="{{ entity.operator.name }}" image="http://{{ entity.league.site }}/{{ entity.league.league }}/background.png">
+					<div class="card-content">
+						<div class="layout horizontal">
+							<div class="space prefix" data-prefix="Players"><div>{{ entity.operator.entity_count }}</div></div>					
+							<div class="space twitter">{{ entity.operator.twitter_count }}</div>
+							<div class="space instagram">&nbsp;{{ entity.operator.instagram_count }}</div>					
+						</div>
+						<template is="dom-if" if="has_teams(entity.operator)">
+							Has Teams
+						</template>					
+					</div>
+					<div class="card-actions">
+						<div class="layout flex"></div>
+						<paper-toggle-button id="filter_{{ entity.league.league }}" checked="{{ !entity.blocked }}" on-change="toggle_league"></paper-toggle-button>
+					</div>
+				</paper-card>
+			</template>
+			<div>&nbsp;</div>
+		</paper-dialog-scrollable>		
+	</div>	
+	<div class="footer_row">
+		<div class="layout flex"></div>
+		<div class="space">Leagues {{ selected_count(leagues.*, 'league') }}</div>
+		<div class="space">Teams {{ selected_count(leagues.*, 'teams') }}</div>
+		<div class="space">Players {{ selected_count(leagues.*, 'players') }}</div>
+		<div class="space">Twitters {{ selected_count(leagues.*, 'twitter') }}</div>
+		<div class="space">Instagrams {{ selected_count(leagues.*, 'instagram') }}</div>
+		<div class="layout flex"></div>
+	</div>	
+</template>
+<script>
+    class ModalSettings extends Polymer.Element {
+        static get is() {
+            return 'modal-settings';
+        }
+        static get properties() {
+            return {
+            	leagues: {	            	
+	            	value: Array
+	            }
+          	}
+        }
+        toggle_league(e) {
+        	let ln = e.target.id.split('_')[1];
+        	this.leagues.forEach( (l, i) => {
+        		if (l.name == ln) {
+        			sessionStorage.setItem('blocked:' + l.name, l.blocked);	
+        			this.set(['leagues', i, 'blocked'], l.blocked)
+        		}
+        	})
+        	this.update_leagues();
+        }
+        update_leagues() {
+        	window.dispatchEvent(new CustomEvent('update_leagues', {
+        		detail: { leagues: this.leagues }
+        	}));
+        }
+        selected_count(ign, count_type) {
+        	if ( count_type == 'league' ) {
+        		return this.leagues.filter((l) => { return !l.blocked }).length;
+        	} else if ( count_type == 'players' ) {
+        		return this.leagues.filter((l) => { return !l.blocked }).map((l) => { return l.operator.entity_count }).reduce((a, b) => a + b, 0);
+        	} else if ( count_type == 'twitter' ) {
+        		return this.leagues.filter((l) => { return !l.blocked }).map((l) => { return l.operator.twitter_count }).reduce((a, b) => a + b, 0);
+        	} else if ( count_type == 'instagram' ) {
+        		return this.leagues.filter((l) => { return !l.blocked }).map((l) => { return l.operator.instagram_count }).reduce((a, b) => a + b, 0);
+        	} else if ( count_type == 'teams' ) {
+        		return this.leagues.filter((l) => { return !l.blocked }).map((l) => { return l.operator.team_count || 0 }).reduce((a, b) => a + b, 0);
+        	}
+        }
+        has_teams(o) {
+        	return o.team_count && o.team_count > 0; 
+        }
+        to_string(e) {
+        	return Object.keys(e)
+        }
+        load_settings() {
+        	let promises = [];
+        	let leagues = nativeLeagues.map(l => ({name: l}))
+        	leagues.forEach( (l) => {
+        		l.blocked = sessionStorage.getItem('blocked:' + l.name) == 'true';
+        		['operator', 'league'].forEach((prefix) => {
+          			let cache_name = prefix + '-' + l.name;
+          			var c = global_cache(cache_name, 'http://' + JSON.parse(localStorage.getItem('environment')).service + '/site/' + prefix +'/' + l.name).then((o) => {
+          				l[prefix] = o;
+          			})
+          			promises.push(c)
+          		});        		
+        	})
+        	Promise.all(promises).then(() => {
+        		console.log('settings: done:', promises.length)
+        		leagues.sort((a, b) => {
+					return b.operator.twitter_count - a.operator.twitter_count;
+				});
+        		this.set('leagues', leagues)
+            	this.update_leagues();
+        	});
+        }
+        ready() {
+            super.ready();
+            this.load_settings();
+        }
+    }
+    customElements.define(ModalSettings.is, ModalSettings);
+</script>
+</dom-module>

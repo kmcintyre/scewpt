@@ -1,0 +1,278 @@
+<link rel="import" href="/bower_components/app-layout/app-layout.html">
+<link rel="import" href="/bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+
+<link rel="import" href="/bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="/bower_components/iron-selector/iron-selector.html">
+
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/bower_components/iron-icons/av-icons.html">
+<link rel="import" href="/bower_components/iron-icons/social-icons.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+<link rel="import" href="/bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="/bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="/bower_components/paper-styles/typography.html">
+<link rel="import" href="/bower_components/paper-styles/color.html">
+<link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="/bower_components/paper-toggle-button/paper-toggle-button.html">
+
+<link rel="import" href="modal-signin.html">
+<link rel="import" href="modal-settings.html">
+
+<dom-module id="main-app">
+    <template>
+        <style include="iron-flex iron-flex-alignment">
+            :host {                            
+            }
+            app-header {
+                background-image: url(/curator_background.png);
+            }
+            #twitter_contents {
+                margin-top: 10px
+            }
+            .title {
+            	@apply --paper-font-display2;
+            	font-family: 'Permanent Marker', cursive;
+            }
+    		.headline {
+    			@apply --paper-font-headline;    			    			
+    		} 
+    		paper-tabs {
+    			--paper-tabs-content: {
+    				@apply --paper-font-title;
+    				background-color: rgba(255, 255, 255, .83);
+    			}
+    			--paper-tab-ink: var(--paper-light-blue-a700);
+    			--paper-tabs-container: {
+    				border-radius: 2.5em;
+    				margin: 6px 0 18px 0;
+    			}
+  				--paper-tabs-selection-bar-color: var(--paper-blue-a700);
+			}
+    		dt {
+    			@apply --layout-horizontal;
+    			@apply --layout-flex;    			
+    		}
+    		.button {
+    			background: var(--default-primary-color);
+    			color: white;
+    		}
+			paper-checkbox .subtitle {
+                display: block;
+                margin: 10px;                
+            }
+           	#configure {
+				cursor: pointer;
+				width: 40px;
+    			height: 40px;
+			}   
+			#settings {
+				border-radius: 8px;
+				width: 75%;
+				height: 75%;
+				background: linear-gradient(white, black);
+			}
+			.blue {
+				display:none;
+			}
+			.main {
+				padding-top: 10px
+			}
+         </style>
+         
+         <iron-media-query query="(min-width: 960px)" query-matches="{{wide}}"></iron-media-query>         
+         <iron-media-query query="(min-width: 600px) and (max-width: 959px)" query-matches="{{medium}}"></iron-media-query>
+         <iron-media-query query="(max-width: 599px)" query-matches="{{small}}"></iron-media-query>
+                  
+         <paper-dialog id="modal" with-backdrop>
+         	<modal-signin></modal-signin>
+         </paper-dialog>
+         <paper-dialog id="settings" with-backdrop>
+         	<modal-settings></modal-settings>
+         </paper-dialog>
+		 <app-header-layout fullbleed>             
+             <app-header id="appheader" slot="header" fixed shadow>
+                 <app-toolbar>                     
+                    <h1 class="title">{{ title }}</h1>
+                    <div class="layout flex"></div>
+                    <iron-icon id="configure" icon="settings" on-tap="launch" hidden$="{{ !can_select() }}"></iron-icon>                                               
+                 </app-toolbar>
+                 	<template is="dom-if" if="{{ !small }}">
+				        <div class="layout horizontal center">       
+						    <paper-tabs selected="{{selected}}">
+						    	<template is="dom-repeat" items="{{ menu }}">
+						    		<template is="dom-if" if="{{ visibleTab(item) }}">
+						    			<paper-tab>{{item.tab}}</paper-tab>
+						    		</template>
+				      			</template>	       
+						    </paper-tabs>
+						    <div class="layout flex tall"></div>			    
+						    <paper-button class="button" raised on-tap="login" hidden$="{{ !user.isAdmin }}"><iron-icon icon="pageview"></iron-icon>Login</paper-button>			    			    
+					    	<paper-icon-item hidden$="[[!user.isAdmin]]">
+								<paper-toggle-button id="environment_toggle" slot="item-icon" on-tap="env" checked$="{{ environment.on }}"></paper-toggle-button>
+								<span>{{ environment.title }}</span>
+				        	</paper-icon-item>			    			        		    
+					    </div> 
+					</template>               
+            </app-header>
+		    <div class="layout horizontal">
+			    <div class="blue">
+			    	left
+			    </div>
+			    <div class="layout flex main">			    	
+					<iron-pages selected="[[selected]]">
+						<social-stream></social-stream>
+						<instagram-stream></instagram-stream>
+						<social-conversations></social-conversations>
+						<social-mentions></social-mentions>
+						<social-quotes></social-quotes>				
+			        	<template is="dom-if" if="{{ user.isAdmin }}">
+				        	<social-entities></social-entities>
+				        	<social-match></social-match>
+				        	<social-missing></social-missing>
+				            <social-blocked></social-blocked>
+				        </template>						
+					</iron-pages>
+				</div>
+				<div class="blue">
+					right
+				</div>	
+			</div>	    	            				
+         </app-header-layout>                  
+    </template>
+    <script>                      
+		var admin = false
+		if ( document.location.hash && document.location.hash == '#admin' ) {			
+			console.log('hash:', document.location.hash)
+			admin = true
+		}
+	    function global_cache(cache_name, url) {
+	    	return new Promise((resolve, reject) => {
+			    if ( !sessionStorage.getItem(cache_name) ) {
+			    	return fetch(new Request(url, {
+			           	method: 'GET', 
+			           	mode: 'cors'
+			          })).then((resp) => {
+			          	if (!resp.ok) {
+			          		console.log('resp:', resp)
+			      	        throw Error(resp.statusText);
+			      	    }
+			    	    return resp.json();
+			          }).then((result) => {
+			      		sessionStorage.setItem(cache_name, JSON.stringify(result))
+			      		resolve(result)
+			      	  }).catch((error) => {
+			      		console.log(url, 'get error: ' + error.message);
+			      		reject()
+			      	  });	     		
+			    } else {
+			    	resolve(JSON.parse(sessionStorage.getItem(cache_name)))  	
+			    }      			    		
+		    }).then((o) => {
+		    	return o
+		    })    	
+	    }
+	    	    
+        class MainApp extends Polymer.Element {
+            static get is() {
+                return 'main-app';
+            }
+            static get properties() {
+                return {   
+                	title: {
+                		value: nativeDomain
+                	},
+                    user: {
+                        type: Object,
+                        value: { isAdmin: admin }
+                    },                	
+                    environment: {
+                        type: Object
+                    },
+                    selected: {
+                        type: Number,
+                        observer: 'selectedChanged'
+                    },
+                    menu: {
+                        type: Array,
+                        value: [ 
+                        	{ tab:'Stream', needsAdmin: false}, 
+                        	{ tab:'Instagrams', needsAdmin: false}, 
+                        	{ tab:'Conversations', needsAdmin: false}, 
+                        	{ tab:'Mentions', needsAdmin: false}, 
+                        	{ tab:'Quotes', needsAdmin: false}, 
+                        	{ tab:'Entities', needsAdmin: true}, 
+                        	{ tab:'Match', needsAdmin: true}, 
+                        	{ tab:'Missing', needsAdmin: true}, 
+                        	{ tab:'Blocked', needsAdmin: true}
+                        	]
+                    }                    
+                }
+            }
+            can_select() {
+            	return nativeLeagues.length > 1 && !this.$.settings.opened; 
+            }
+            confirm(e) {
+            	console.log('confirm:', this.$.pin.value)
+            }
+            launch(e) {
+            	this.$.settings.open()
+            	this.can_select()
+            }
+            login(e) {
+            	this.$.modal.open()
+            	if (!this.user.oauth_token) {
+           			fetch('http://' + JSON.parse(localStorage.getItem('environment')).service + '/auth').then((resp) => {
+       			   		if (!resp.ok) {
+       			   	        throw Error(response.statusText);
+       			   	    }
+       		   	    	return resp.json();		   			 
+       		   		}).then((token_data) => {
+       		   			this.set('user.oauth_token', token_data.oauth_token)
+       		   		}).catch((error) => {
+       		   			console.log('match get error: ' + error.message);
+       		   			this.set('entities', [])
+       		   		})            				
+            	}            	
+            }
+            env(e) {
+            	if (!e.target.checked) {
+                    localStorage.setItem('environment', JSON.stringify(prod))
+                } else {
+                    localStorage.setItem('environment', JSON.stringify(dev))
+                }
+                this.set('environment.title',  JSON.parse(localStorage.getItem("environment")).title)
+                location.reload();
+            }
+            visibleTab(i) {
+            	return !i.needsAdmin || this.user.isAdmin
+            }
+            accept(e) {
+            	this.set('selected', 0)
+            }
+            selectedChanged(s) {            	
+            	localStorage.setItem("selected", JSON.stringify({selected: s}), parseInt(s))
+            	Polymer.importHref(
+           			this.resolveUrl( 'social-' + this.menu[s].tab.toLowerCase() + '.html'), 
+                 		() => { console.log('success:', this.menu[s].tab.toLowerCase()) },
+                 		() => { console.log('error') },
+                  		true
+       			)            	            	
+            }            
+            ready() {
+                super.ready();                           
+                this.set('environment', JSON.parse(localStorage.getItem("environment")))                
+                if (!localStorage.getItem("selected")) {
+                	localStorage.setItem('selected', JSON.stringify({ selected: 0 }) )
+                }
+                this.set('selected', Math.max(JSON.parse(localStorage.getItem("selected")).selected, 0) );
+            }
+        }
+        customElements.define(MainApp.is, MainApp);
+    </script>
+</dom-module>

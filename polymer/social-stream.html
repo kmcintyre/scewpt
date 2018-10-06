@@ -1,0 +1,110 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="/polymer/league-tweet.html">
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="social-stream">
+   <template>
+      <style include="shared-styles iron-flex iron-flex-alignment">
+         :host {
+         	@apply(--layout-vertical);         	
+         }      
+      </style>
+      <div id="incoming"></div>
+      <div id="start"></div>
+      <div id="history">
+	      <div id="bottom" class="init">
+	      		<div class="layout horizontal">
+	      			Loading&nbsp;<span class="capitalize">{{ find }}</span>
+	      			<paper-spinner style="padding-left:20px;" class="large" active></paper-spinner>
+	      		</div>	      		
+	      		<div>
+	      			<span class="capitalize">{{ find }}</span> Limit Reached
+	      		</div>
+	      		<div style="padding: 10px 0 20px 0">
+	      			<a class="angelco angleplug" href="https://angel.co/{{ angelco }}" target="_blank"><span>Learn More About This Project</span></a>
+	      		</div>	      			      		      	
+	      </div>      
+      </div>
+   </template>
+   <script>   
+   class SocialStream extends Polymer.Element {
+	    static get is() {
+	        return 'social-stream';
+	    }
+	    static get properties() {
+	        return {
+	        	find: {
+	        		value: 'recent'
+	        	},
+	        	last: {
+	        		type: String
+	        	},
+	        	intersectionObserver: {
+	        		type: Object
+	        	}
+	    	}
+	    }
+	    streamChanged(stream) {
+	   		stream.forEach((b) => {
+	   			var stream_div = Polymer.dom(this.root).querySelector('div#twitter_' + b)
+	   			console.log('stream div:', stream_div)
+	   		})
+	    }
+	    backfill() {
+	    	let b = {
+	    		backfill: 10
+	    	}
+	    	if ( this.last ) {
+	    		b.last = this.last;	
+	    	}
+	    	web_socket.send(JSON.stringify(b));
+	    }
+	    observe() {
+	    	this.$.bottom.classList.remove('init')
+	    	this.intersectionObserver.observe(this.$.bottom);            	    	
+	    }
+	    ready() {
+	    	super.ready()
+			this.set('intersectionObserver', new IntersectionObserver(entries => {
+               //console.log(this.find, 'intersection entries:', entries);
+               if (entries[0].intersectionRatio !== 0) {
+            	   console.log('         ASDF')
+            	   this.intersectionObserver.unobserve(this.$.bottom);
+            	   this.backfill()
+               }
+           	}, {
+               threshold: 1.0
+           	}));
+	    	window.addEventListener('tweet', (e) => {	    		
+	    		let ce = document.createElement('league-tweet')
+				ce.setAttribute('tweet', JSON.stringify(e.detail.tweet))
+				if ( e.detail.tweet.windout ) {
+					if (e.detail.tweet.windout == 1) {
+						this.intersectionObserver.observe(this.$.bottom);
+					}
+					this.set('last', e.detail.tweet._tweet_id);
+					this.$.history.insertBefore(ce, this.$.bottom);
+				} else {
+					this.$.incoming.insertBefore(ce, this.$.incoming.firstChild)
+				}
+		    }, false);	    	
+	    	if ( !web_socket || web_socket.readyState != 1 ) {
+	    		window.addEventListener('open', (e) => {
+		    		this.observe()
+			    }, false);	    		
+	    	} else if ( web_socket.readyState == 1 ) {
+	    		this.observe()	    		
+	    	}	    	
+	    }
+	}
+	customElements.define(SocialStream.is, SocialStream);      
+   </script>
+</dom-module>
+		   		

@@ -1,0 +1,154 @@
+<link rel="import" href="/bower_components/iron-media-query/iron-media-query.html">
+<script src="/bower_components/date-fns/dist/date_fns.min.js"></script>
+<script>
+/* @polymerMixin */
+LeagueMixin = (superClass) => class extends superClass {
+	constructor() {
+		super();
+	}
+    static get properties() {
+        return {
+        	curator: Object,
+        	operator: Object,
+        	tweet: Object,       	
+        	entity: Object,
+        	league: Object,
+        	leagueEntity: Object,        	
+        	team: Object,
+        	teamEntity: Object,
+        	tweetMentions: Object,
+        	conversationEntity: Object,        	
+        	conversationLeague: Object,
+        	conversationLeagueEntity: Object,        	
+        	conversationTeam: Object,        	
+        	conversationTeamEntity: Object,
+        	retweetEntity: Object,
+        	retweetLeague: Object,
+        	retweetLeagueEntity:Object,
+        	retweetTeam: Object,
+        	retweetTeamEntity: Object,        	
+        	quuoteEntity: Object,
+        	quuoteLeague: Object,
+        	quuoteLeagueEntity: Object,
+        	quuoteTeam: Object,
+        	quuoteTeamEntity: Object        	
+    	}
+    }
+    timeFromSec(s) {
+    	return this.time(new Date(s * 1000))
+    }
+    time(d, f) {
+    	return dateFns.format(d, f ? f : 'MMM, D YYYY')
+    }   
+    findTeam(prefix, team_obj, p) {
+    	p.push(global_cache(team_obj.league + '-team-' + team_obj.team, 'http://' + JSON.parse(localStorage.getItem('environment')).service + '/site/team/' + team_obj.league + '/' + team_obj.team).then((team) => {
+  	    	this.set(prefix, team)
+  	    	let t_site = JSON.parse(localStorage.getItem('environment')).service.split('.')[0] + '.' + team.site;
+  	    	p.push(global_cache('entity-' + team.twitter_id, 'http://' + t_site + '/profile/' + team.twitter_id + '/' + team.ts_scout).then((teamEntity) => {
+  	  	    	this.set(prefix + 'Entity', teamEntity)
+  	  	    }));
+  	    }));
+    }
+    load() {
+    	let promises = [];
+    	if ( this.tweet.team ) {
+    		this.findTeam('team', this.tweet, promises)
+    	};
+    	promises.push(global_cache('entity-' + this.tweet._twitter_id, 'http://' + JSON.parse(localStorage.getItem('environment')).service + '/profile/' + this.tweet._twitter_id +'/' + this.tweet.ts_scout).then((o) => {
+			this.set('entity', o)
+		}));
+  		['league', 'operator', 'curator'].forEach((prefix) => {
+  			promises.push(global_cache(prefix + '-' + this.tweet.league, 'http://' + JSON.parse(localStorage.getItem('environment')).service + '/site/' + prefix +'/' + this.tweet.league).then((o) => {
+  				this.set(prefix, o)
+  				if ( prefix == 'league' ) {
+  					promises.push(global_cache('entity-' + o.twitter_id, 'http://' + JSON.parse(localStorage.getItem('environment')).service + '/profile/' + o.twitter_id +'/' + o.ts_scout).then((oe) => {
+  						this.set('leagueEntity', oe)
+  					}));		
+  				}
+  			}));
+  		});  
+    	if ( this.tweet.known_mentions ) {
+    		let mentions_promises = [];
+    		let mentions = [];
+    		this.tweet.known_mentions.forEach( (m) => {
+    			let mention = {};
+    			mention.mention = m
+    			mentions.push(mention);
+    			let m_site = JSON.parse(localStorage.getItem('environment')).service.split('.')[0] + '.' + m.site;
+    			mentions_promises.push(global_cache('operator-' + m.league, 'http://' + m_site + '/site/operator/' + m.league).then((o) => {
+    				mention.operator = o;
+    			}));
+    			mentions_promises.push(global_cache('league-' + m.league, 'http://' + m_site + '/site/league/' + m.league).then((m_league) => {
+    				mention.league = m_league;
+        	    }));    			
+    			mentions_promises.push(global_cache('entity-' + m._twitter_id, 'http://' + m_site + '/profile/' + m._twitter_id + '/' + m.ts_scout).then((m_entity) => {
+    				mention.entity = m_entity;
+        	    }));
+    			if (m.team) {
+    				mentions_promises.push(global_cache(m.league + '-team-' + m.team, 'http://' + m_site + '/site/team/' + m.league + '/' + m.team).then((m_team) => {
+    					mention.team = m_team;
+    		  	    }))
+    			}	
+    		});
+			promises.push(Promise.all(mentions_promises).then(() => {
+				console.log('finished mention promises:', mentions_promises.length, mentions)
+				this.set('tweetMentions', mentions)
+			}));
+    	};
+    	['conversation', 'retweet', 'quote'].forEach((suffix) => {    		
+    		if ( this.tweet['known_' + suffix] ) {    			
+    			let known = this.tweet['known_' + suffix]
+    			//console.log('has:', suffix, known)
+    			let known_site = JSON.parse(localStorage.getItem('environment')).service.split('.')[0] + '.' + known.site
+    			promises.push(global_cache('league-' + known.league, 'http://' + known_site + '/site/league/' + known.league).then((l) => {
+        			this.set(suffix + 'League', l);
+  					promises.push(global_cache('entity-' + l.twitter_id, 'http://' + JSON.parse(localStorage.getItem('environment')).service + '/profile/' + l.twitter_id +'/' + l.ts_scout).then((le) => {
+  						this.set(suffix + 'LeagueEntity', le)
+  					}));
+        	    }));    			
+    			promises.push(global_cache('entity-' + known._twitter_id, 'http://' + known_site + '/profile/' + known._twitter_id + '/' + known.ts_scout).then((ke) => {    				
+        			this.set(suffix + 'Entity', ke)
+        	    }));    			
+    			if ( known.team ) {
+    				this.findTeam(suffix + 'Team', known, promises)
+    			}    			
+    		}
+    	});  		
+    	return Promise.all(promises)
+    }
+    add_tweet() {
+    	let width = parseInt(window.document.documentElement.style.getPropertyValue('--mWidth'))
+		return twttr.widgets.createTweet(
+  	       		this.tweet._tweet_id,
+  	       		this, { width }
+  	       	).then((el) => {
+  	       		if ( !el ) {
+ 	          		this.classList.add('hidden')
+ 	          		return;	
+ 	          	} else if ( this.tweet.known_quote ) {
+ 		  	    	let div = document.createElement('div')        			
+	  				return twttr.widgets.createTweet(
+	  					this.tweet.known_quote._tweet_id,
+	  		       		div, { width }
+	  		        ).then((el2) => {      		
+	  	          		if ( !el2 ) {
+	  	          			this.classList.add('hidden')
+	  	          			return [el];	
+	  	          		} 
+	  	          		this.$.tweetbox.insertBefore(div, this.$.tweetbox.firstChild)
+	  	          		return [el, el2]
+	  		       	})    		
+ 		  	    } else {
+ 		  	    	return [el]	
+ 		  	    } 	          		 	          	     
+  	        })    	
+    }
+    ready() {
+    	return this.load().then(() => {    		
+    		//console.log('finished promises:', promises.length, width);
+    		super.ready();
+    		return this.add_tweet();
+    	});
+    }
+}
+</script>

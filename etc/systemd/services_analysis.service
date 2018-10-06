@@ -1,0 +1,14 @@
+[Unit]
+Description=Stalk Analysis Service
+
+[Service]
+User=ubuntu
+EnvironmentFile=/home/ubuntu/scewpt/etc/python.env
+LimitNOFILE=40000
+WorkingDirectory=/home/ubuntu/scewpt/python
+ExecStart=/usr/bin/python /home/ubuntu/scewpt/python/twitter/job/analysis.py
+Restart=always
+RestartSec=300
+
+[Install]
+WantedBy=multi-user.target

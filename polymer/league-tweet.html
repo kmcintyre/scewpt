@@ -1,0 +1,156 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="/bower_components/paper-styles/shadow.html">
+<link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="/polymer/tweet-entity.html">
+<link rel="import" href="/polymer/league-mixin.html">
+<link rel="import" href="/polymer/shared-styles.html">
+
+<dom-module id="league-tweet">
+   <template>
+      <style include="shared-styles iron-flex iron-flex-alignment">
+	:host {
+	}
+	
+	div.wrapper {
+	  @apply(--shadow-elevation-4dp);
+	  background-color: white;
+	}
+	
+	@media only screen and (min-width:960px) {
+	  div.wrapper {
+	    @apply(--layout-horizontal);
+		margin: 12px;
+	  }
+	
+	  div.left, div.right {
+	    @apply(--layout-vertical);
+	    width: var(--vWidth);
+	  }
+	
+	  div.middle {
+	    @apply(--layout-vertical);
+	    width: var(--mWidth);
+	  }
+	
+	  #tweetbox {
+	    padding-left: 14px;
+	  }
+	}
+	
+	@media only screen and (max-width:959px) and (min-width:600px) {
+	  div.wrapper {
+	    @apply(--layout-horizontal);
+	    margin: 6px;
+	  }
+	
+	  div.left, div.right {
+	    width: var(--vWidth);
+	    @apply(--layout-vertical);
+	  }
+	  	
+	  div.middle {
+	    width: var(--mWidth);
+	  }
+	}
+	
+	@media only screen and (max-width:599px) {
+	  div.wrapper {
+	    @apply(--layout-vertical);
+	    margin: 6px;
+	  }
+	  div.left, div.right {
+	    @apply(--layout-horizontal);
+	    width: var(--mWidth);
+	  }
+	
+	  div.middle {
+	    width: var(--mWidth);
+	  }
+	
+	  #tweetbox {
+	    padding-left: 14px;
+	  }
+	}	
+	hr {
+		border-top: 1px solid #8f8f8f;
+		width: 60%;
+		text-align:left; 
+		margin: 2px auto 8px 0;
+	}	 
+      </style>  
+      <div class="wrapper">
+      		<div class="left">
+      			<div class="hidden">[[ kv(tweet) ]]</div>      			
+   				<tweet-entity league="{{ league }}" entity="{{ entity }}" operator="{{ operator}}" source="{{ tweet }}"></tweet-entity>   				      				      						      					      						      		      
+		      	<template is="dom-if" if="[[ has(team) ]]">
+		      		<hr>
+		      		<tweet-entity league="{{ league }}" entity="{{ teamEntity }}" operator="{{ operator}}" source="{{ team }}"></tweet-entity>		      		
+		      	</template>
+		      	<template is="dom-if" if="[[ !skip_avi() ]]">
+		      		<hr>
+		      		<tweet-entity league="{{ league }}" entity="{{ leagueEntity }}" operator="{{ operator}}" source="{{ league }}"></tweet-entity>
+		      	</template>      			
+      		</div>
+      		<div class="middle">
+      			<div id="tweetbox">
+		      		<slot></slot>
+		    	</div>
+		    </div>
+		    <div class="right">
+		    	<div class="layout horizontal end-justified">
+      				<a href="https://twitter.com/statuses/[[ tweet._tweet_id ]]" target="_blank" class="tweet-link"><span class="tweet-text">Tweet</span></a>      				
+      			</div>		    	      			
+		    	<template is="dom-if" if="[[ has(tweet.known_retweet) ]]">
+		      		<div class="retweet">
+		      			<span class="retweet"></span>		      			
+		      			<tweet-entity league="{{ retweetLeague }}" entity="{{ retweetEntity }}" operator="{{ operator}}" source="{{ tweet.known_retweet }}"></tweet-entity>
+		      		</div>		      				
+		      	</template>
+      			<template is="dom-if" if="[[ has(tweet.known_mentions) ]]">
+		      		<div class="mentions">		      		
+		      			<span class="mentions"></span>
+		      			<template is="dom-repeat" items="{{ tweetMentions }}" as="mention">
+		      				<tweet-entity league="{{ mention.league }}" entity="{{ mention.entity }}" operator="{{ mention.operator }}" source="{{ mention.mention }}"></tweet-entity>		      				
+		      			</template>
+		      		</div>	
+		      	</template>	      			
+		      	<template is="dom-if" if="[[ has(tweet.known_conversation) ]]">
+		      		<div class="conversation">		      			
+		      			<span class="conversation"></span>		      			
+		      			<tweet-entity league="{{ conversationLeague }}" entity="{{ conversationEntity }}" operator="{{ operator}}" source="{{ tweet.known_conversation }}"></tweet-entity>
+		      		</div>		      				
+		      	</template>
+				<template is="dom-if" if="[[ has(tweet.known_quote) ]]">					
+		      		<div class="quote">
+		      			<span class="quote"></span>
+		      			<tweet-entity league="{{ quoteLeague }}" entity="{{ quoteEntity }}" operator="{{ operator}}" source="{{ tweet.known_quote }}"></tweet-entity>		      			
+		      		</div>		      				
+		      	</template>	      				   	
+		    </div>
+     </div>
+   </template>
+   <script>
+	class LeagueTweet extends LeagueMixin(Polymer.Element) {	
+	    static get is() {
+	        return 'league-tweet';
+	    }
+	    kv(t) {
+	    	return Object.keys(t).map((k) => { return k + ':' + t[k] + ' '  })
+	    }
+	    has(...t) {
+	    	return t.filter((t2) => { return typeof t2 !== 'undefined'}).length > 0
+	    }
+	    skip_avi() {
+	    	return this.league.twitter_id == this.tweet._twitter_id
+	    }
+	    ready() {
+	    	super.ready().then((ans) => {
+	    		console.log('tweet:', typeof ans)	
+	    	});	    	
+	    }
+	}
+	customElements.define(LeagueTweet.is, LeagueTweet);      
+   </script>
+</dom-module>
